@@ -95,10 +95,9 @@
     <Compile Include="src\Basic_SkyBox.as" />
     <Compile Include="src\Basic_Stereo.as" />
     <Compile Include="src\Basic_View.as" />
-    <Compile Include="src\away3d\primitives\Foliage.as" />
-    <Compile Include="src\away3d\primitives\FractalTreeRound.as" />
     <Compile Include="src\shallowwater\DisturbanceBrush.as" />
     <Compile Include="src\shallowwater\MemoryDisturbance.as" />
+    <Compile Include="src\Intermediate_ParticleExplosions.as" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\assets\PolarBear.awd" />
@@ -167,7 +166,6 @@
     <None Include="src\Intermediate_MD5Animation.as" />
     <None Include="src\Intermediate_MouseInteraction.as" />
     <None Include="src\Intermediate_OnkbaAWDAnimation.as" />
-    <None Include="src\Intermediate_ParticleExplosions.as" />
     <None Include="src\Intermediate_ParticleTrails.as" />
     <None Include="src\Intermediate_PerelithKnightMD2.as" />
     <None Include="src\Intermediate_PlanarReflections.as" />
@@ -181,6 +179,9 @@
     <None Include="src\cornell\CornellDiffuseEnvMapFR.as" />
     <None Include="src\cornell\CornellDiffuseEnvMapNL.as" />
     <None Include="src\cornell\CornellDiffuseEnvMapNR.as" />
+    <None Include="src\away3d\primitives\FractalTreeRound.as" />
+    <None Include="embeds\skybox\hourglass_cubemap.atf" />
+    <None Include="src\away3d\primitives\Foliage.as" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="src\assets\onkba\floor_diffuse.jpg" />
@@ -247,19 +248,53 @@
     <BundleResource Include="embeds\floor_diffuse.jpg" />
     <BundleResource Include="embeds\floor_normal.jpg" />
     <BundleResource Include="embeds\floor_specular.jpg" />
+    <BundleResource Include="embeds\skybox\grimnight_negX.png" />
+    <BundleResource Include="embeds\skybox\grimnight_negY.png" />
+    <BundleResource Include="embeds\skybox\grimnight_negZ.png" />
+    <BundleResource Include="embeds\skybox\grimnight_posX.png" />
+    <BundleResource Include="embeds\skybox\grimnight_posY.png" />
+    <BundleResource Include="embeds\skybox\grimnight_posZ.png" />
+    <BundleResource Include="embeds\skybox\sky_negX.jpg" />
+    <BundleResource Include="embeds\skybox\sky_negY.jpg" />
+    <BundleResource Include="embeds\skybox\sky_negZ.jpg" />
+    <BundleResource Include="embeds\skybox\sky_posX.jpg" />
+    <BundleResource Include="embeds\skybox\sky_posY.jpg" />
+    <BundleResource Include="embeds\skybox\sky_posZ.jpg" />
+    <BundleResource Include="embeds\skybox\snow_negative_x.jpg" />
+    <BundleResource Include="embeds\skybox\snow_negative_y.jpg" />
+    <BundleResource Include="embeds\skybox\snow_negative_z.jpg" />
+    <BundleResource Include="embeds\skybox\snow_positive_x.jpg" />
+    <BundleResource Include="embeds\skybox\snow_positive_y.jpg" />
+    <BundleResource Include="embeds\skybox\snow_positive_z.jpg" />
+    <BundleResource Include="embeds\skybox\space_negX.jpg" />
+    <BundleResource Include="embeds\skybox\space_negY.jpg" />
+    <BundleResource Include="embeds\skybox\space_negZ.jpg" />
+    <BundleResource Include="embeds\skybox\space_posX.jpg" />
+    <BundleResource Include="embeds\skybox\space_posY.jpg" />
+    <BundleResource Include="embeds\skybox\space_posZ.jpg" />
+    <BundleResource Include="embeds\blue.png" />
+    <BundleResource Include="embeds\air.png" />
+    <BundleResource Include="embeds\player.png" />
+    <BundleResource Include="embeds\beachball_diffuse.jpg" />
+    <BundleResource Include="embeds\beachball_specular.jpg" />
+    <BundleResource Include="embeds\trinket_diffuse.jpg" />
+    <BundleResource Include="embeds\trinket_normal.jpg" />
+    <BundleResource Include="embeds\trinket_specular.jpg" />
+    <BundleResource Include="embeds\weave_diffuse.jpg" />
+    <BundleResource Include="embeds\weave_normal.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-monotouch.csproj">
+      <Project>{CC73D545-B7C7-4FB4-996A-C76E8B0D5B81}</Project>
+      <Name>PlayScript.Dynamic_aot-monotouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-monotouch.csproj">
+      <Project>{876BFFD1-CEFA-44DD-9243-A50958EF65DD}</Project>
+      <Name>pscorlib_aot-monotouch</Name>
+    </ProjectReference>
     <ProjectReference Include="..\mono-away3d-core\away3d-core-monotouch.csproj">
       <Project>{FF1734CB-3667-4A23-BC9F-795E331A44B9}</Project>
       <Name>away3d-core-monotouch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\mono-as3\mcs\class\ascorlib_aot\ascorlib_aot-monotouch.csproj">
-      <Project>{876BFFD1-CEFA-44DD-9243-A50958EF65DD}</Project>
-      <Name>ascorlib_aot-monotouch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\mono-as3\mcs\class\ActionScript.Dynamic_aot\ActionScript.Dynamic_aot-monotouch.csproj">
-      <Project>{CC73D545-B7C7-4FB4-996A-C76E8B0D5B81}</Project>
-      <Name>ActionScript.Dynamic_aot-monotouch</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
