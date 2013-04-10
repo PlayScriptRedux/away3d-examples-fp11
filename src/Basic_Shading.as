@@ -61,6 +61,7 @@ package
     	[Embed(source="/../embeds/signature.swf", symbol="Signature")]
     	private var SignatureSwf:Class;
     	
+#if false
 		//cube textures
 		[Embed(source="/../embeds/trinket_diffuse.jpg")]
     	public static var TrinketDiffuse:Class;
@@ -88,6 +89,25 @@ package
 		public static var FloorSpecular:Class;
 		[Embed(source="/../embeds/floor_normal.jpg")]
 		public static var FloorNormals:Class;
+#else
+		//cube textures
+    	public static var TrinketDiffuse:BitmapData = BitmapData.loadFromPath("embeds/trinket_diffuse.jpg");
+		public static var TrinketSpecular:BitmapData = BitmapData.loadFromPath("embeds/trinket_specular.jpg");
+		public static var TrinketNormals:BitmapData = BitmapData.loadFromPath("embeds/trinket_normal.jpg");
+		
+    	//sphere textures
+    	public static var BeachBallDiffuse:BitmapData = BitmapData.loadFromPath("embeds/beachball_diffuse.jpg");
+		public static var BeachBallSpecular:BitmapData = BitmapData.loadFromPath("embeds/beachball_specular.jpg");
+		
+    	//torus textures
+		public static var WeaveDiffuse:BitmapData = BitmapData.loadFromPath("embeds/weave_diffuse.jpg");
+		public static var WeaveNormals:BitmapData = BitmapData.loadFromPath("embeds/weave_normal.jpg");
+		
+		//plane textures
+		public static var FloorDiffuse:BitmapData = BitmapData.loadFromPath("embeds/floor_diffuse.jpg");
+		public static var FloorSpecular:BitmapData = BitmapData.loadFromPath("embeds/floor_specular.jpg");
+		public static var FloorNormals:BitmapData = BitmapData.loadFromPath("embeds/floor_normal.jpg");
+#endif
     	
     	//engine variables
     	private var scene:Scene3D;
@@ -172,14 +192,16 @@ package
 			addChild(view);
 			
 			//add signature
-			Signature = Sprite(new SignatureSwf());
-			SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
-			stage.quality = StageQuality.HIGH;
-			SignatureBitmap.bitmapData.draw(Signature);
-			stage.quality = StageQuality.LOW;
-			addChild(SignatureBitmap);
+			if (SignatureSwf!=null) {
+				Signature = Sprite(new SignatureSwf());
+				SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
+				stage.quality = StageQuality.HIGH;
+				SignatureBitmap.bitmapData.draw(Signature);
+				stage.quality = StageQuality.LOW;
+				addChild(SignatureBitmap);
+			}
 			
-			addChild(new AwayStats(view));
+			//addChild(new AwayStats(view));
 		}
 		
 		/**
@@ -274,7 +296,7 @@ package
 		 */
 		private function initListeners():void
 		{
-			addEventListener(Event.ENTER_FRAME, onEnterFrame);
+			stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
 			stage.addEventListener(Event.RESIZE, onResize);
@@ -334,7 +356,9 @@ package
 		{
 			view.width = stage.stageWidth;
 			view.height = stage.stageHeight;
-			SignatureBitmap.y = stage.stageHeight - Signature.height;
+            if (SignatureBitmap) {
+			    SignatureBitmap.y = stage.stageHeight - Signature.height;
+            }
 		}
 	}
 }

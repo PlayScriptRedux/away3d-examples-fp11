@@ -64,7 +64,7 @@ package
 	
 	public class Intermediate_ParticleExplosions extends Sprite
 	{
-		private const PARTICLE_SIZE:uint = 3;
+		private const PARTICLE_SIZE:int = 3;
 		private const NUM_ANIMATORS:uint = 4;
 		
 		//signature swf
@@ -72,12 +72,17 @@ package
 		public var SignatureSwf:Class;
 		
 		//ADobe AIR image
+		#if false
 		[Embed(source="/../embeds/air.png")]
 		private var AIRImage:Class;
 		
 		//Adobe Flash player image
 		[Embed(source="/../embeds/player.png")]
 		private var PlayerImage:Class;
+		#else
+		private var AIRImage:BitmapData = BitmapData.loadFromPath("embeds/air.png");
+		private var PlayerImage:BitmapData = BitmapData.loadFromPath("embeds/player.png");
+		#endif
 		
 		//engine variables
 		private var scene:Scene3D;
@@ -170,14 +175,17 @@ package
 			addChild(view);
 			
 			//add signature
-			Signature = Sprite(new SignatureSwf());
-			SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
-			stage.quality = StageQuality.HIGH;
-			SignatureBitmap.bitmapData.draw(Signature);
-			stage.quality = StageQuality.LOW;
-			addChild(SignatureBitmap);
+			if (SignatureSwf != null)
+			{
+				Signature = Sprite(new SignatureSwf());
+				SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
+				stage.quality = StageQuality.HIGH;
+				SignatureBitmap.bitmapData.draw(Signature);
+				stage.quality = StageQuality.LOW;
+				addChild(SignatureBitmap);
+			}
 			
-			addChild(new AwayStats(view));
+			//addChild(new AwayStats(view));
 		}
 		
 		/**
@@ -343,7 +351,7 @@ package
 		 */
 		private function initListeners():void
 		{
-			addEventListener(Event.ENTER_FRAME, onEnterFrame);
+			stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
 			stage.addEventListener(Event.RESIZE, onResize);
@@ -460,7 +468,9 @@ package
 		{
 			view.width = stage.stageWidth;
 			view.height = stage.stageHeight;
-			SignatureBitmap.y = stage.stageHeight - Signature.height;
+			if (SignatureBitmap != null) {
+				SignatureBitmap.y = stage.stageHeight - Signature.height;
+			}
 		}
 	}
 }

@@ -53,9 +53,13 @@ package
 	public class Basic_View extends Sprite
 	{
 		//plane texture
+		#if false
 		[Embed(source="/../embeds/floor_diffuse.jpg")]
 		public static var FloorDiffuse:Class;
-		
+		#else
+		public static var FloorDiffuse:BitmapData = BitmapData.loadFromPath("embeds/floor_diffuse.jpg");
+		#endif
+
 		//engine variables
 		private var _view:View3D;
 		
@@ -84,7 +88,7 @@ package
 			_view.scene.addChild(_plane);
 			
 			//setup the render loop
-			addEventListener(Event.ENTER_FRAME, _onEnterFrame);
+			stage.addEventListener(Event.ENTER_FRAME, _onEnterFrame);
 			stage.addEventListener(Event.RESIZE, onResize);
 			onResize();
 		}

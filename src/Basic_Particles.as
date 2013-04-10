@@ -67,8 +67,12 @@ package
 		private var SignatureSwf:Class;
 		
 		//particle image
+#if false
 		[Embed(source="/../embeds/blue.png")]
 		private var ParticleImg:Class;
+#else
+		private var ParticleImg:BitmapData = BitmapData.loadFromPath("embeds/blue.png");
+#endif
 		
 		//engine variables
 		private var _view:View3D;
@@ -103,16 +107,19 @@ package
 			addChild(_view);
 			
 			//add signature
-			Signature = Sprite(new SignatureSwf());
-			SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
-			stage.quality = StageQuality.HIGH;
-			SignatureBitmap.bitmapData.draw(Signature);
-			stage.quality = StageQuality.LOW;
-			addChild(SignatureBitmap);
+			if (SignatureSwf) 
+			{
+				Signature = Sprite(new SignatureSwf());
+				SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
+				stage.quality = StageQuality.HIGH;
+				SignatureBitmap.bitmapData.draw(Signature);
+				stage.quality = StageQuality.LOW;
+				addChild(SignatureBitmap);
+			}
 			
 			_cameraController = new HoverController(_view.camera, null, 45, 20, 1000);
 			
-			addChild(new AwayStats(_view));
+			//addChild(new AwayStats(_view));
 			
 			//setup the particle geometry
 			var plane:Geometry = new PlaneGeometry(10, 10, 1, 1, false);
@@ -140,7 +147,7 @@ package
 			_particleAnimator.start();
 			
 			//add listeners
-			addEventListener(Event.ENTER_FRAME, onEnterFrame);
+			stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
 			stage.addEventListener(Event.RESIZE, onResize);
@@ -171,6 +178,9 @@ package
 				_cameraController.tiltAngle = 0.3*(stage.mouseY - _lastMouseY) + _lastTiltAngle;
 			}
 			_view.render();
+			
+			// must call this explicitly until enter frame event routing is properly supported
+			_particleAnimator.onEnterFrame(event);
 		}
 		
 		/**
@@ -211,7 +221,10 @@ package
 		{
 			_view.width = stage.stageWidth;
 			_view.height = stage.stageHeight;
-			SignatureBitmap.y = stage.stageHeight - Signature.height;
+			if (Signature!=null)
+			{
+				SignatureBitmap.y = stage.stageHeight - Signature.height;
+			}
 		}
 	}
 }
