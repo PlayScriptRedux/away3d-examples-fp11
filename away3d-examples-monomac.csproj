@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C782716F-D0E1-465F-A79C-70059B1A6AAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>playscriptaway3dexamples</RootNamespace>
+    <AssemblyName>playscript-away3d-examples</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="src\Advanced_FractalTreeDemo.as" />
+    <None Include="src\Advanced_MultiPassSponzaDemo.as" />
+    <None Include="src\Advanced_ShallowWaterDemo.as" />
+    <None Include="src\Advanced_TerrainDemo.as" />
+    <None Include="src\Basic_Fire.as" />
+    <None Include="src\Basic_Load3DS.as" />
+    <None Include="src\Basic_Stereo.as" />
+    <None Include="src\Basic_Tweening3D.as" />
+    <None Include="src\Intermediate_Globe.as" />
+    <None Include="src\Intermediate_Head.as" />
+    <None Include="src\Intermediate_LightProbes.as" />
+    <None Include="src\Intermediate_MD5Animation.as" />
+    <None Include="src\Intermediate_MouseInteraction.as" />
+    <None Include="src\Intermediate_OnkbaAWDAnimation.as" />
+    <None Include="src\Intermediate_ParticleTrails.as" />
+    <None Include="src\Intermediate_PerelithKnightMD2.as" />
+    <None Include="src\Intermediate_PlanarReflections.as" />
+    <None Include="src\Intermediate_PolarBearAWDAnimation.as" />
+    <None Include="src\Intermediate_RealTimeEnvMap.as" />
+    <None Include="src\assets\PolarBear.awd" />
+    <None Include="src\assets\snow.obj" />
+    <None Include="src\assets\onkba\floor_diffuse.jpg" />
+    <None Include="src\assets\onkba\floor_normals.jpg" />
+    <None Include="src\assets\onkba\floor_specular.jpg" />
+    <None Include="src\assets\onkba\gun_diffuse.jpg" />
+    <None Include="src\assets\onkba\gun_lightmap.jpg" />
+    <None Include="src\assets\onkba\gun_normals.jpg" />
+    <None Include="src\assets\onkba\onkba.awd" />
+    <None Include="src\assets\onkba\onkba_diffuse.png" />
+    <None Include="src\assets\onkba\onkba_lightmap.jpg" />
+    <None Include="src\assets\onkba\onkba_normals.jpg" />
+    <None Include="src\assets\sponza\arch_ddn.jpg" />
+    <None Include="src\assets\sponza\arch_diff.jpg" />
+    <None Include="src\assets\sponza\arch_spec.jpg" />
+    <None Include="src\assets\sponza\background.jpg" />
+    <None Include="src\assets\sponza\background_ddn.jpg" />
+    <None Include="src\assets\sponza\bricks_a_ddn.jpg" />
+    <None Include="src\assets\sponza\bricks_a_diff.jpg" />
+    <None Include="src\assets\sponza\bricks_a_spec.jpg" />
+    <None Include="src\assets\sponza\ceiling_a_diff.jpg" />
+    <None Include="src\assets\sponza\ceiling_a_spec.jpg" />
+    <None Include="src\assets\sponza\chain_texture.png" />
+    <None Include="src\assets\sponza\chain_texture_ddn.jpg" />
+    <None Include="src\assets\sponza\column_a_ddn.jpg" />
+    <None Include="src\assets\sponza\column_a_diff.jpg" />
+    <None Include="src\assets\sponza\column_a_spec.jpg" />
+    <None Include="src\assets\sponza\column_b_ddn.jpg" />
+    <None Include="src\assets\sponza\column_b_diff.jpg" />
+    <None Include="src\assets\sponza\column_b_spec.jpg" />
+    <None Include="src\assets\sponza\column_c_ddn.jpg" />
+    <None Include="src\assets\sponza\column_c_diff.jpg" />
+    <None Include="src\assets\sponza\column_c_spec.jpg" />
+    <None Include="src\assets\sponza\curtain_blue_diff.jpg" />
+    <None Include="src\assets\sponza\curtain_diff.jpg" />
+    <None Include="src\assets\sponza\curtain_green_diff.jpg" />
+    <None Include="src\assets\sponza\curtain_spec.jpg" />
+    <None Include="src\assets\sponza\details_diff.jpg" />
+    <None Include="src\assets\sponza\details_spec.jpg" />
+    <None Include="src\assets\sponza\fabric_blue_diff.jpg" />
+    <None Include="src\assets\sponza\fabric_diff.jpg" />
+    <None Include="src\assets\sponza\fabric_green_diff.jpg" />
+    <None Include="src\assets\sponza\fabric_spec.jpg" />
+    <None Include="src\assets\sponza\flagpole_diff.jpg" />
+    <None Include="src\assets\sponza\flagpole_spec.jpg" />
+    <None Include="src\assets\sponza\floor_a_diff.jpg" />
+    <None Include="src\assets\sponza\floor_a_spec.jpg" />
+    <None Include="src\assets\sponza\gi_flag.jpg" />
+    <None Include="src\assets\sponza\lion.jpg" />
+    <None Include="src\assets\sponza\lion2_ddn.jpg" />
+    <None Include="src\assets\sponza\r2d2 texture.jpg" />
+    <None Include="src\assets\sponza\roof_diff.jpg" />
+    <None Include="src\assets\sponza\sponza.awd" />
+    <None Include="src\assets\sponza\thorn_ddn.jpg" />
+    <None Include="src\assets\sponza\thorn_diff.jpg" />
+    <None Include="src\assets\sponza\thorn_diff.png" />
+    <None Include="src\assets\sponza\thorn_spec.jpg" />
+    <None Include="src\assets\sponza\vase_ddn.jpg" />
+    <None Include="src\assets\sponza\vase_dif.jpg" />
+    <None Include="src\assets\sponza\vase_hanging.jpg" />
+    <None Include="src\assets\sponza\vase_plant.png" />
+    <None Include="src\assets\sponza\vase_plant_spec.jpg" />
+    <None Include="src\assets\sponza\vase_round.jpg" />
+    <None Include="src\assets\sponza\vase_round_ddn.jpg" />
+    <None Include="src\assets\sponza\vase_round_spec.jpg" />
+    <None Include="src\assets\sponza\atf\arch_ddn.atf" />
+    <None Include="src\assets\sponza\atf\arch_diff.atf" />
+    <None Include="src\assets\sponza\atf\arch_spec.atf" />
+    <None Include="src\assets\sponza\atf\background.atf" />
+    <None Include="src\assets\sponza\atf\background_ddn.atf" />
+    <None Include="src\assets\sponza\atf\bricks_a_ddn.atf" />
+    <None Include="src\assets\sponza\atf\bricks_a_diff.atf" />
+    <None Include="src\assets\sponza\atf\bricks_a_spec.atf" />
+    <None Include="src\assets\sponza\atf\ceiling_a_diff.atf" />
+    <None Include="src\assets\sponza\atf\ceiling_a_spec.atf" />
+    <None Include="src\assets\sponza\atf\chain_texture.atf" />
+    <None Include="src\assets\sponza\atf\chain_texture_ddn.atf" />
+    <None Include="src\assets\sponza\atf\column_a_ddn.atf" />
+    <None Include="src\assets\sponza\atf\column_a_diff.atf" />
+    <None Include="src\assets\sponza\atf\column_a_spec.atf" />
+    <None Include="src\assets\sponza\atf\column_b_ddn.atf" />
+    <None Include="src\assets\sponza\atf\column_b_diff.atf" />
+    <None Include="src\assets\sponza\atf\column_b_spec.atf" />
+    <None Include="src\assets\sponza\atf\column_c_ddn.atf" />
+    <None Include="src\assets\sponza\atf\column_c_diff.atf" />
+    <None Include="src\assets\sponza\atf\column_c_spec.atf" />
+    <None Include="src\assets\sponza\atf\curtain_blue_diff.atf" />
+    <None Include="src\assets\sponza\atf\curtain_diff.atf" />
+    <None Include="src\assets\sponza\atf\curtain_green_diff.atf" />
+    <None Include="src\assets\sponza\atf\curtain_spec.atf" />
+    <None Include="src\assets\sponza\atf\details_diff.atf" />
+    <None Include="src\assets\sponza\atf\details_spec.atf" />
+    <None Include="src\assets\sponza\atf\fabric_blue_diff.atf" />
+    <None Include="src\assets\sponza\atf\fabric_diff.atf" />
+    <None Include="src\assets\sponza\atf\fabric_green_diff.atf" />
+    <None Include="src\assets\sponza\atf\fabric_spec.atf" />
+    <None Include="src\assets\sponza\atf\flagpole_diff.atf" />
+    <None Include="src\assets\sponza\atf\flagpole_spec.atf" />
+    <None Include="src\assets\sponza\atf\floor_a_diff.atf" />
+    <None Include="src\assets\sponza\atf\floor_a_spec.atf" />
+    <None Include="src\assets\sponza\atf\gi_flag.atf" />
+    <None Include="src\assets\sponza\atf\hourglass_cubemap2.atf" />
+    <None Include="src\assets\sponza\atf\lion.atf" />
+    <None Include="src\assets\sponza\atf\lion2_ddn.atf" />
+    <None Include="src\assets\sponza\atf\r2d2-texture.atf" />
+    <None Include="src\assets\sponza\atf\roof_diff.atf" />
+    <None Include="src\assets\sponza\atf\thorn_ddn.atf" />
+    <None Include="src\assets\sponza\atf\thorn_diff.atf" />
+    <None Include="src\assets\sponza\atf\thorn_spec.atf" />
+    <None Include="src\assets\sponza\atf\vase_ddn.atf" />
+    <None Include="src\assets\sponza\atf\vase_dif.atf" />
+    <None Include="src\assets\sponza\atf\vase_hanging.atf" />
+    <None Include="src\assets\sponza\atf\vase_plant.atf" />
+    <None Include="src\assets\sponza\atf\vase_plant_spec.atf" />
+    <None Include="src\assets\sponza\atf\vase_round.atf" />
+    <None Include="src\assets\sponza\atf\vase_round_ddn.atf" />
+    <None Include="src\assets\sponza\atf\vase_round_spec.atf" />
+    <None Include="src\away3d\primitives\Foliage.as" />
+    <None Include="src\away3d\primitives\FractalTreeRound.as" />
+    <None Include="src\cornell\CornellDiffuseEnvMapFL.as" />
+    <None Include="src\cornell\CornellDiffuseEnvMapFR.as" />
+    <None Include="src\cornell\CornellDiffuseEnvMapNL.as" />
+    <None Include="src\cornell\CornellDiffuseEnvMapNR.as" />
+    <None Include="src\shallowwater\DisturbanceBrush.as" />
+    <None Include="src\shallowwater\FluidDisturb.as" />
+    <None Include="src\shallowwater\MemoryDisturbance.as" />
+    <None Include="src\shallowwater\ShallowFluid.as" />
+    <None Include="src\utils\BitmapFilterEffects.as" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\playscript-away3d-core\away3d-core-monomac.csproj">
+      <Project>{91FC9AA4-D01B-4AF1-83C8-ED31CB51B84E}</Project>
+      <Name>away3d-core-monomac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\playscript-mono\mcs\class\pscorlib\pscorlib-net_4_0_monomac.csproj">
+      <Project>{EDBACFCB-2817-4A2E-8DDF-B24AEFA56352}</Project>
+      <Name>pscorlib-net_4_0_monomac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\playscript-mono\mcs\class\PlayScript.Dynamic\PlayScript.Dynamic-net_4_0.csproj">
+      <Project>{5F7F9AF6-CE83-4F13-A25F-355DB2861D43}</Project>
+      <Name>PlayScript.Dynamic-net_4_0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Basic_Particles.as" />
+    <Compile Include="src\Basic_Shading.as" />
+    <Compile Include="src\Basic_SkyBox.as" />
+    <Compile Include="src\Basic_View.as" />
+    <Compile Include="src\Intermediate_ParticleExplosions.as" />
+  </ItemGroup>
+</Project>
