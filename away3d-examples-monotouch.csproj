@@ -292,7 +292,7 @@
       <Project>{876BFFD1-CEFA-44DD-9243-A50958EF65DD}</Project>
       <Name>pscorlib_aot-monotouch</Name>
     </ProjectReference>
-    <ProjectReference Include="..\mono-away3d-core\away3d-core-monotouch.csproj">
+    <ProjectReference Include="..\playscript-away3d-core\away3d-core-monotouch.csproj">
       <Project>{FF1734CB-3667-4A23-BC9F-795E331A44B9}</Project>
       <Name>away3d-core-monotouch</Name>
     </ProjectReference>
