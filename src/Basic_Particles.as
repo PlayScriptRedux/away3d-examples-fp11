@@ -147,7 +147,7 @@ package
 			_particleAnimator.start();
 			
 			//add listeners
-			stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+			addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
 			stage.addEventListener(Event.RESIZE, onResize);
@@ -178,9 +178,6 @@ package
 				_cameraController.tiltAngle = 0.3*(stage.mouseY - _lastMouseY) + _lastTiltAngle;
 			}
 			_view.render();
-			
-			// must call this explicitly until enter frame event routing is properly supported
-			_particleAnimator.onEnterFrame(event);
 		}
 		
 		/**
