@@ -14,7 +14,7 @@ namespace OpenGLLayer
 	public partial class MyView : MonoMac.AppKit.NSView
 	{
 
-		static OpenGLLayer movingLayer;
+		static public OpenGLLayer movingLayer;
 
         #region Constructors
 
@@ -48,13 +48,38 @@ namespace OpenGLLayer
 			Layer = new CALayer ();
 			Layer.AddSublayer (movingLayer);
 			WantsLayer = true;
+
+		}
+
+		public override bool AcceptsFirstMouse (NSEvent theEvent)
+		{
+			return true;
 		}
 
 		public override void MouseDown (NSEvent theEvent)
 		{
-			//PointF location =  ConvertPointFromView(theEvent.LocationInWindow, null);
-			//movingLayer.Position = new PointF(location.X, location.Y);
+            movingLayer.MouseDown(theEvent);
 		}
+
+		public override void MouseDragged(NSEvent theEvent)
+		{
+			movingLayer.MouseMoved(theEvent);
+		}
+
+		public override void MouseUp (NSEvent theEvent)
+		{
+			movingLayer.MouseUp(theEvent);
+ 		}
+
+		public override void KeyDown (NSEvent theEvent)
+		{
+            movingLayer.KeyDown(theEvent);
+		}	
+        
+        public override void KeyUp (NSEvent theEvent)
+		{
+            movingLayer.KeyUp(theEvent);
+        }
 		
 		partial void toggle (NSButton sender)
 		{

@@ -52,6 +52,79 @@ namespace OpenGLLayer
 			set { animate = value; }
 		}
 
+		PointF GetLocationForEvent(NSEvent theEvent)
+		{
+			// invert coordinates
+			return new PointF(theEvent.LocationInWindow.X, this.Frame.Y - theEvent.LocationInWindow.Y);
+		}
+
+        public void MouseDown (NSEvent theEvent)
+        {
+            PointF p = GetLocationForEvent(theEvent);
+
+            if (mStage!=null) 
+            {
+                mStage.mouseX = p.X;
+                mStage.mouseY = p.Y;
+                
+                // dispatch touch event
+                var te = new flash.events.TouchEvent(flash.events.TouchEvent.TOUCH_BEGIN, true, false, 0, true, p.X, p.Y, 1.0, 1.0, 1.0 );
+                mStage.dispatchEvent (te);
+                
+                // dispatch mouse event
+                var me = new flash.events.MouseEvent(flash.events.MouseEvent.MOUSE_DOWN, true, false, p.X, p.Y, mStage);
+                mStage.dispatchEvent (me);
+            }
+            
+        }
+        
+        public void MouseMoved (NSEvent theEvent)
+        {
+            PointF p = GetLocationForEvent(theEvent);
+
+            if (mStage!=null) 
+            {
+                mStage.mouseX = p.X;
+                mStage.mouseY = p.Y;
+                
+                // dispatch touch event
+                var te = new flash.events.TouchEvent(flash.events.TouchEvent.TOUCH_MOVE, true, false, 0, true, p.X, p.Y, 1.0, 1.0, 1.0 );
+                mStage.dispatchEvent (te);
+                
+                // dispatch mouse event
+                var me = new flash.events.MouseEvent(flash.events.MouseEvent.MOUSE_MOVE, true, false, p.X, p.Y, mStage);
+                mStage.dispatchEvent (me);
+            }
+            
+        }
+
+        public void MouseUp (NSEvent theEvent)
+        {
+            PointF p = GetLocationForEvent(theEvent);
+
+            if (mStage!=null) 
+            {
+                mStage.mouseX = p.X;
+                mStage.mouseY = p.Y;
+                
+                // dispatch touch event
+                var te = new flash.events.TouchEvent(flash.events.TouchEvent.TOUCH_END, true, false, 0, true, p.X, p.Y, 1.0, 1.0, 1.0 );
+                mStage.dispatchEvent (te);
+                
+                // dispatch mouse event
+                var me = new flash.events.MouseEvent(flash.events.MouseEvent.MOUSE_UP, true, false, p.X, p.Y, mStage);
+                mStage.dispatchEvent (me);
+            }            
+        }
+        
+        public void KeyDown (NSEvent theEvent)
+        {
+        }	
+        
+        public void KeyUp (NSEvent theEvent)
+        {
+        }
+
 		public override bool CanDrawInCGLContext (CGLContext glContext, CGLPixelFormat pixelFormat, double timeInterval, ref CVTimeStamp timeStamp)
 		{
 			return animate;
@@ -73,11 +146,11 @@ namespace OpenGLLayer
 				// construct demo
 				// $$TODO come up with a better demo chooser!
 				flash.display.DisplayObject.globalStage = mStage;
-				mDemoSprite = new _root.Basic_View();
+				//mDemoSprite = new _root.Basic_View();
 				//mDemoSprite = new _root.Basic_SkyBox();
 				//mDemoSprite = new _root.Basic_Particles();
 				//mDemoSprite = new _root.Intermediate_ParticleExplosions();
-				//mDemoSprite = new _root.Basic_Shading();
+				mDemoSprite = new _root.Basic_Shading();
 				flash.display.DisplayObject.globalStage = null;
 			}
 

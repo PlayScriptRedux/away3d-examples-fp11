@@ -27,7 +27,16 @@ namespace OpenGLLayer
 		// Shared initialization code
 		void Initialize ()
 		{
+			this.AcceptsMouseMovedEvents = true;
 		}
+
+		public override void MouseMoved (NSEvent theEvent)
+		{
+			// big hack here using the static, need to fix the monomac app at some point..
+			if (MyView.movingLayer != null)	MyView.movingLayer.MouseMoved(theEvent);
+		}
+
+
 		
 		#endregion
 	}
