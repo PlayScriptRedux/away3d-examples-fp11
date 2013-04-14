@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.OpenGLLayer</string>
+	<string>com.zynga.PlayScriptAway3D</string>
 	<key>CFBundleName</key>
-	<string>OpenGLLayer</string>
+	<string>PlayScriptAway3D</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>

@@ -8,7 +8,7 @@
     <ProjectGuid>{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}</ProjectGuid>
     <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>StarlingDemo</RootNamespace>
+    <RootNamespace>PlayScriptApp</RootNamespace>
     <AssemblyName>away3d-app-monomac</AssemblyName>
     <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
   </PropertyGroup>
@@ -67,8 +67,8 @@
     <Compile Include="MainMenu.xib.designer.cs">
       <DependentUpon>MainMenu.xib</DependentUpon>
     </Compile>
-    <Compile Include="MyView.cs" />
-    <Compile Include="OpenGLLayer.cs" />
+    <Compile Include="MyOpenGLView.cs" />
+    <Compile Include="Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainWindow.xib" xmlns="" />
