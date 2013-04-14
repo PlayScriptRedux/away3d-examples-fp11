@@ -108,5 +108,110 @@
     <BundleResource Include="..\..\embeds\floor_specular.jpg">
       <Link>embeds\floor_specular.jpg</Link>
     </BundleResource>
+    <BundleResource Include="..\..\embeds\beachball_diffuse.jpg">
+      <Link>embeds\beachball_diffuse.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\beachball_specular.jpg">
+      <Link>embeds\beachball_specular.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\trinket_diffuse.jpg">
+      <Link>embeds\trinket_diffuse.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\trinket_normal.jpg">
+      <Link>embeds\trinket_normal.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\trinket_specular.jpg">
+      <Link>embeds\trinket_specular.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\weave_diffuse.jpg">
+      <Link>embeds\weave_diffuse.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\weave_normal.jpg">
+      <Link>embeds\weave_normal.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\grimnight_negX.png">
+      <Link>embeds\skybox\grimnight_negX.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\grimnight_negY.png">
+      <Link>embeds\skybox\grimnight_negY.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\grimnight_negZ.png">
+      <Link>embeds\skybox\grimnight_negZ.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\grimnight_posX.png">
+      <Link>embeds\skybox\grimnight_posX.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\grimnight_posY.png">
+      <Link>embeds\skybox\grimnight_posY.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\grimnight_posZ.png">
+      <Link>embeds\skybox\grimnight_posZ.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\hourglass_cubemap.atf">
+      <Link>embeds\skybox\hourglass_cubemap.atf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\sky_negX.jpg">
+      <Link>embeds\skybox\sky_negX.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\sky_negY.jpg">
+      <Link>embeds\skybox\sky_negY.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\sky_negZ.jpg">
+      <Link>embeds\skybox\sky_negZ.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\sky_posX.jpg">
+      <Link>embeds\skybox\sky_posX.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\sky_posY.jpg">
+      <Link>embeds\skybox\sky_posY.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\sky_posZ.jpg">
+      <Link>embeds\skybox\sky_posZ.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\snow_negative_x.jpg">
+      <Link>embeds\skybox\snow_negative_x.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\snow_negative_y.jpg">
+      <Link>embeds\skybox\snow_negative_y.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\snow_negative_z.jpg">
+      <Link>embeds\skybox\snow_negative_z.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\snow_positive_x.jpg">
+      <Link>embeds\skybox\snow_positive_x.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\snow_positive_y.jpg">
+      <Link>embeds\skybox\snow_positive_y.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\snow_positive_z.jpg">
+      <Link>embeds\skybox\snow_positive_z.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\space_negX.jpg">
+      <Link>embeds\skybox\space_negX.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\space_negY.jpg">
+      <Link>embeds\skybox\space_negY.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\space_negZ.jpg">
+      <Link>embeds\skybox\space_negZ.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\space_posX.jpg">
+      <Link>embeds\skybox\space_posX.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\space_posY.jpg">
+      <Link>embeds\skybox\space_posY.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\skybox\space_posZ.jpg">
+      <Link>embeds\skybox\space_posZ.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\blue.png">
+      <Link>embeds\blue.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\air.png">
+      <Link>embeds\air.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\player.png">
+      <Link>embeds\player.png</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>

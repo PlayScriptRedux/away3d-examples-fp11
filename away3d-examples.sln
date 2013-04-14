@@ -41,10 +41,10 @@ Global
 		Debug - AST|Any CPU = Debug - AST|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
-		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
-		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
-		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.AppStore|iPhone.Build.0 = Release|Any CPU
 		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}.Debug - AST|Any CPU.ActiveCfg = Debug|Any CPU
@@ -295,6 +295,6 @@ Global
 		{91FC9AA4-D01B-4AF1-83C8-ED31CB51B84E} = {9B09DFA5-6EF9-4D7B-8E7B-D5BBFE3F2360}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = playscript\MonoTouch\away3d-app-monotouch.csproj
+		StartupItem = playscript\MonoMac\away3d-app-monomac.csproj
 	EndGlobalSection
 EndGlobal
