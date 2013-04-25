@@ -140,7 +140,7 @@ package
 			
 			//setup materials
 			_groundMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this, "SandTexture")));
-			//_groundMaterial.shadowMethod = new FilteredShadowMapMethod(_light);
+			_groundMaterial.shadowMethod = new FilteredShadowMapMethod(_light);
 			_groundMaterial.lightPicker = _lightPicker;
 			_groundMaterial.specular = 0;
 			_ground = new Mesh(new PlaneGeometry(1000, 1000), _groundMaterial);
@@ -201,7 +201,7 @@ package
 				mesh.castsShadows = true;
 			} else if (event.asset.assetType == AssetType.MATERIAL) {
 				var material:TextureMaterial = event.asset as TextureMaterial;
-				//material.shadowMethod = new FilteredShadowMapMethod(_light);
+				material.shadowMethod = new FilteredShadowMapMethod(_light);
 				material.lightPicker = _lightPicker;
 				material.gloss = 30;
 				material.specular = 1;
