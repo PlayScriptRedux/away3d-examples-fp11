@@ -38,8 +38,6 @@
     <None Include="src\Advanced_ShallowWaterDemo.as" />
     <None Include="src\Advanced_TerrainDemo.as" />
     <None Include="src\Basic_Stereo.as" />
-    <None Include="src\Basic_Tweening3D.as" />
-    <None Include="src\Intermediate_Globe.as" />
     <None Include="src\Intermediate_Head.as" />
     <None Include="src\Intermediate_LightProbes.as" />
     <None Include="src\Intermediate_MD5Animation.as" />
@@ -178,6 +176,7 @@
     <None Include="src\shallowwater\MemoryDisturbance.as" />
     <None Include="src\shallowwater\ShallowFluid.as" />
     <None Include="src\utils\BitmapFilterEffects.as" />
+    <None Include="src\Basic_Tweening3D.as" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\playscript-away3d-core\away3d-core-monomac.csproj">
@@ -204,5 +203,6 @@
     <Compile Include="src\Intermediate_ParticleExplosions.as" />
     <Compile Include="src\Basic_Load3DS.as" />
     <Compile Include="src\Basic_Fire.as" />
+    <Compile Include="src\Intermediate_Globe.as" />
   </ItemGroup>
 </Project>

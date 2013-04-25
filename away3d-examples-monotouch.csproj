@@ -103,6 +103,7 @@
     <Compile Include="src\shallowwater\DisturbanceBrush.as" />
     <Compile Include="src\shallowwater\MemoryDisturbance.as" />
     <Compile Include="src\Intermediate_ParticleExplosions.as" />
+    <Compile Include="src\Intermediate_Globe.as" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\assets\PolarBear.awd" />
@@ -165,7 +166,6 @@
     <None Include="src\Advanced_MultiPassSponzaDemo.as" />
     <None Include="src\Advanced_ShallowWaterDemo.as" />
     <None Include="src\Advanced_TerrainDemo.as" />
-    <None Include="src\Intermediate_Globe.as" />
     <None Include="src\Intermediate_Head.as" />
     <None Include="src\Intermediate_LightProbes.as" />
     <None Include="src\Intermediate_MD5Animation.as" />
@@ -290,6 +290,24 @@
     <BundleResource Include="embeds\CoarseRedSand.jpg" />
     <BundleResource Include="embeds\soldier_ant.jpg" />
     <BundleResource Include="embeds\soldier_ant.3ds" />
+    <BundleResource Include="embeds\globe\EarthNormal.png" />
+    <BundleResource Include="embeds\globe\cloud_combined_2048.jpg" />
+    <BundleResource Include="embeds\globe\earth_specular_2048.jpg" />
+    <BundleResource Include="embeds\globe\land_lights_16384.jpg" />
+    <BundleResource Include="embeds\globe\land_ocean_ice_2048_match.jpg" />
+    <BundleResource Include="embeds\lensflare\flare0.jpg" />
+    <BundleResource Include="embeds\lensflare\flare1.jpg" />
+    <BundleResource Include="embeds\lensflare\flare10.jpg" />
+    <BundleResource Include="embeds\lensflare\flare11.jpg" />
+    <BundleResource Include="embeds\lensflare\flare12.jpg" />
+    <BundleResource Include="embeds\lensflare\flare2.jpg" />
+    <BundleResource Include="embeds\lensflare\flare3.jpg" />
+    <BundleResource Include="embeds\lensflare\flare4.jpg" />
+    <BundleResource Include="embeds\lensflare\flare5.jpg" />
+    <BundleResource Include="embeds\lensflare\flare6.jpg" />
+    <BundleResource Include="embeds\lensflare\flare7.jpg" />
+    <BundleResource Include="embeds\lensflare\flare8.jpg" />
+    <BundleResource Include="embeds\lensflare\flare9.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-monotouch.csproj">

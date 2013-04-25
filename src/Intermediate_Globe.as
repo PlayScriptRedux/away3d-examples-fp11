@@ -88,45 +88,45 @@ package
 		
 		//skybox textures
 		[Embed(source="/../embeds/skybox/space_posX.jpg")]
-		private var PosX:Class;
+		public var PosX:Class;
 		[Embed(source="/../embeds/skybox/space_negX.jpg")]
-		private var NegX:Class;
+		public var NegX:Class;
 		[Embed(source="/../embeds/skybox/space_posY.jpg")]
-		private var PosY:Class;
+		public var PosY:Class;
 		[Embed(source="/../embeds/skybox/space_negY.jpg")]
-		private var NegY:Class;
+		public var NegY:Class;
 		[Embed(source="/../embeds/skybox/space_posZ.jpg")]
-		private var PosZ:Class;
+		public var PosZ:Class;
 		[Embed(source="/../embeds/skybox/space_negZ.jpg")]
-		private var NegZ:Class;
+		public var NegZ:Class;
 		
 		//lens flare
 		[Embed(source="/../embeds/lensflare/flare0.jpg")]
-		private var Flare0:Class;
+		public var Flare0:Class;
 		[Embed(source="/../embeds/lensflare/flare1.jpg")]
-		private var Flare1:Class;
+		public var Flare1:Class;
 		[Embed(source="/../embeds/lensflare/flare2.jpg")]
-		private var Flare2:Class;
+		public var Flare2:Class;
 		[Embed(source="/../embeds/lensflare/flare3.jpg")]
-		private var Flare3:Class;
+		public var Flare3:Class;
 		[Embed(source="/../embeds/lensflare/flare4.jpg")]
-		private var Flare4:Class;
+		public var Flare4:Class;
 		[Embed(source="/../embeds/lensflare/flare5.jpg")]
-		private var Flare5:Class;
+		public var Flare5:Class;
 		[Embed(source="/../embeds/lensflare/flare6.jpg")]
-		private var Flare6:Class;
+		public var Flare6:Class;
 		[Embed(source="/../embeds/lensflare/flare7.jpg")]
-		private var Flare7:Class;
+		public var Flare7:Class;
 		[Embed(source="/../embeds/lensflare/flare8.jpg")]
-		private var Flare8:Class;
+		public var Flare8:Class;
 		[Embed(source="/../embeds/lensflare/flare9.jpg")]
-		private var Flare9:Class;
+		public var Flare9:Class;
 		[Embed(source="/../embeds/lensflare/flare10.jpg")]
-		private var Flare10:Class;
+		public var Flare10:Class;
 		[Embed(source="/../embeds/lensflare/flare11.jpg")]
-		private var Flare11:Class;
+		public var Flare11:Class;
 		[Embed(source="/../embeds/lensflare/flare12.jpg")]
-		private var Flare12:Class;
+		public var Flare12:Class;
 		
     	//signature swf
     	[Embed(source="/../embeds/signature.swf", symbol="Signature")]
@@ -193,7 +193,7 @@ package
 			initEngine();
 			initText();
 			initLights();
-			initLensFlare();
+			//initLensFlare();
 			initMaterials();
 			initObjects();
 			initListeners();
@@ -228,14 +228,14 @@ package
 			addChild(view);
 			
 			//add signature
-			Signature = Sprite(new SignatureSwf());
+			Signature = Sprite(loadEmbed(this, "SignatureSwf"));
 			SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
 			stage.quality = StageQuality.HIGH;
 			SignatureBitmap.bitmapData.draw(Signature);
 			stage.quality = StageQuality.LOW;
 			addChild(SignatureBitmap);
 			
-			addChild(awayStats = new AwayStats(view));
+			//addChild(awayStats = new AwayStats(view));
 			
 			stage.quality = StageQuality.BEST;
 		}
@@ -260,7 +260,7 @@ package
 				"SCROLL_WHEEL - zoom\n" + 
 				"SPACE - enables fullscreen mode";
 			
-			text.filters = [new DropShadowFilter(1, 45, 0x0, 1, 0, 0)];
+			//text.filters = [new DropShadowFilter(1, 45, 0x0, 1, 0, 0)];
 			
 			addChild(text);
 		}
@@ -280,18 +280,18 @@ package
 		
 		private function initLensFlare():void
 		{
-			flares.push(new FlareObject(new Flare10(),  3.2, -0.01, 147.9));
-			flares.push(new FlareObject(new Flare11(),  6,    0,     30.6));
-			flares.push(new FlareObject(new Flare7(),   2,    0,     25.5));
-			flares.push(new FlareObject(new Flare7(),   4,    0,     17.85));
-			flares.push(new FlareObject(new Flare12(),  0.4,  0.32,  22.95));
-			flares.push(new FlareObject(new Flare6(),   1,    0.68,  20.4));
-			flares.push(new FlareObject(new Flare2(),   1.25, 1.1,   48.45));
-			flares.push(new FlareObject(new Flare3(),   1.75, 1.37,   7.65));
-			flares.push(new FlareObject(new Flare4(),   2.75, 1.85,  12.75));
-			flares.push(new FlareObject(new Flare8(),   0.5,  2.21,  33.15));
-			flares.push(new FlareObject(new Flare6(),   4,    2.5,   10.4));
-			flares.push(new FlareObject(new Flare7(),   10,   2.66,  50));
+			flares.push(new FlareObject(loadEmbed(this,"Flare10"),  3.2, -0.01, 147.9));
+			flares.push(new FlareObject(loadEmbed(this,"Flare11"),  6,    0,     30.6));
+			flares.push(new FlareObject(loadEmbed(this,"Flare7"),   2,    0,     25.5));
+			flares.push(new FlareObject(loadEmbed(this,"Flare7"),   4,    0,     17.85));
+			flares.push(new FlareObject(loadEmbed(this,"Flare12"),  0.4,  0.32,  22.95));
+			flares.push(new FlareObject(loadEmbed(this,"Flare6"),   1,    0.68,  20.4));
+			flares.push(new FlareObject(loadEmbed(this,"Flare2"),   1.25, 1.1,   48.45));
+			flares.push(new FlareObject(loadEmbed(this,"Flare3"),   1.75, 1.37,   7.65));
+			flares.push(new FlareObject(loadEmbed(this,"Flare4"),   2.75, 1.85,  12.75));
+			flares.push(new FlareObject(loadEmbed(this,"Flare8"),   0.5,  2.21,  33.15));
+			flares.push(new FlareObject(loadEmbed(this,"Flare6"),   4,    2.5,   10.4));
+			flares.push(new FlareObject(loadEmbed(this,"Flare7"),   10,   2.66,  50));
 		}
 		
 		/**
@@ -299,10 +299,10 @@ package
 		 */
 		private function initMaterials():void
 		{
-			cubeTexture = new BitmapCubeTexture(Cast.bitmapData(PosX), Cast.bitmapData(NegX), Cast.bitmapData(PosY), Cast.bitmapData(NegY), Cast.bitmapData(PosZ), Cast.bitmapData(NegZ));
+			cubeTexture = new BitmapCubeTexture(Cast.bitmapData(loadEmbed(this,"PosX")), Cast.bitmapData(loadEmbed(this,"NegX")), Cast.bitmapData(loadEmbed(this,"PosY")), Cast.bitmapData(loadEmbed(this,"NegY")), Cast.bitmapData(loadEmbed(this,"PosZ")), Cast.bitmapData(loadEmbed(this,"NegZ")));
 			
 			//adjust specular map
-			var specBitmap:BitmapData = Cast.bitmapData(EarthSpecular); 
+			var specBitmap:BitmapData = Cast.bitmapData(loadEmbed(this,"EarthSpecular")); 
 			specBitmap.colorTransform(specBitmap.rect, new ColorTransform(1, 1, 1, 1, 64, 64, 64));
 			
 			var specular:FresnelSpecularMethod = new FresnelSpecularMethod(true);
@@ -310,14 +310,14 @@ package
 			specular.normalReflectance = 0.1;
 			specular.shadingModel = SpecularShadingModel.PHONG;
 			
-			sunMaterial = new TextureMaterial(Cast.bitmapTexture(Flare10));
+			sunMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this,"Flare10")));
 			sunMaterial.blendMode = BlendMode.ADD;
 			
-			groundMaterial = new TextureMaterial(Cast.bitmapTexture(EarthDiffuse));
+			groundMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this,"EarthDiffuse")));
 			groundMaterial.specularMethod = specular;
 			groundMaterial.specularMap = new BitmapTexture(specBitmap);
-			groundMaterial.normalMap = Cast.bitmapTexture(EarthNormals);
-			groundMaterial.ambientTexture = Cast.bitmapTexture(EarthNight);
+			groundMaterial.normalMap = Cast.bitmapTexture(loadEmbed(this,"EarthNormals"));
+			groundMaterial.ambientTexture = Cast.bitmapTexture(loadEmbed(this,"EarthNight"));
 			groundMaterial.lightPicker = lightPicker;
 			groundMaterial.gloss = 5;
 			groundMaterial.specular = 1;
@@ -325,8 +325,9 @@ package
 			groundMaterial.ambient = 1;
 			
 			var skyBitmap:BitmapData = new BitmapData(2048, 1024, true, 0xFFFFFFFF);
-			skyBitmap.copyChannel(Cast.bitmapData(SkyDiffuse), skyBitmap.rect, new Point(), BitmapDataChannel.RED, BitmapDataChannel.ALPHA);
-			
+			skyBitmap.copyChannel(Cast.bitmapData(loadEmbed(this,"SkyDiffuse")), skyBitmap.rect, new Point(), BitmapDataChannel.RED, BitmapDataChannel.ALPHA);
+			//var skyBitmap:BitmapData = Cast.bitmapData(loadEmbed(this,"SkyDiffuse"));
+
 			cloudMaterial = new TextureMaterial(new BitmapTexture(skyBitmap));
 			cloudMaterial.alphaBlending = true;
 			cloudMaterial.lightPicker = lightPicker;
@@ -351,9 +352,11 @@ package
 		
 		private function modulateDiffuseMethod(vo : MethodVO, t:ShaderRegisterElement, regCache:ShaderRegisterCache, sharedRegisters:ShaderRegisterData):String
 		{
-			var viewDirFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.viewDirFragment;
-			var normalFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.normalFragment;
-			
+//			var viewDirFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.viewDirFragment;
+//			var normalFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.normalFragment;
+			var viewDirFragmentReg:ShaderRegisterElement = sharedRegisters.viewDirFragment;
+			var normalFragmentReg:ShaderRegisterElement = sharedRegisters.normalFragment;
+
 			var code:String = "dp3 " + t + ".w, " + viewDirFragmentReg + ".xyz, " + normalFragmentReg + ".xyz\n" + 
 							"mul " + t + ".w, " + t + ".w, " + t + ".w\n";
 			
@@ -362,8 +365,10 @@ package
 		
 		private function modulateSpecularMethod(vo : MethodVO, t:ShaderRegisterElement, regCache:ShaderRegisterCache, sharedRegisters:ShaderRegisterData):String
 		{
-			var viewDirFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.viewDirFragment;
-			var normalFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.normalFragment;
+//			var viewDirFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.viewDirFragment;
+//			var normalFragmentReg:ShaderRegisterElement = atmosphereDiffuseMethod.sharedRegisters.normalFragment;
+			var viewDirFragmentReg:ShaderRegisterElement = sharedRegisters.viewDirFragment;
+			var normalFragmentReg:ShaderRegisterElement = sharedRegisters.normalFragment;
 			var temp:ShaderRegisterElement = regCache.getFreeFragmentSingleTemp();
 			regCache.addFragmentTempUsages(temp, 1);
 			
@@ -445,7 +450,7 @@ package
 			
 			view.render();
 			
-			updateFlares();
+			//updateFlares();
 		}
 		
 		private function updateFlares():void
@@ -509,7 +514,7 @@ package
 		 * Mouse move listener for mouseLock
 		 */
 		private function onMouseMove(e:MouseEvent):void
-		{
+		{/*
 			if (stage.displayState == StageDisplayState.FULL_SCREEN) {
 				
 				if (mouseLocked && (lastMouseX != 0 || lastMouseY != 0)) {
@@ -535,7 +540,7 @@ package
 					mouseLockY = cameraController.maxTiltAngle/0.3;
 				else if (mouseLockY < cameraController.minTiltAngle/0.3)
 					mouseLockY = cameraController.minTiltAngle/0.3;
-			}
+			}*/
 		}
 		
 		
@@ -590,7 +595,7 @@ package
 			view.width = stage.stageWidth;
 			view.height = stage.stageHeight;
             SignatureBitmap.y = stage.stageHeight - Signature.height;
-			awayStats.x = stage.stageWidth - awayStats.width;
+			//awayStats.x = stage.stageWidth - awayStats.width;
 		}
 	}	
 }

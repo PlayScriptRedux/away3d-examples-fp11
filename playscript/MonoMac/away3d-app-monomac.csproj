@@ -221,5 +221,59 @@
     <BundleResource Include="..\..\embeds\soldier_ant.jpg">
       <Link>embeds\soldier_ant.jpg</Link>
     </BundleResource>
+    <BundleResource Include="..\..\embeds\globe\EarthNormal.png">
+      <Link>embeds\globe\EarthNormal.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\globe\cloud_combined_2048.jpg">
+      <Link>embeds\globe\cloud_combined_2048.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\globe\earth_specular_2048.jpg">
+      <Link>embeds\globe\earth_specular_2048.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\globe\land_lights_16384.jpg">
+      <Link>embeds\globe\land_lights_16384.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\globe\land_ocean_ice_2048_match.jpg">
+      <Link>embeds\globe\land_ocean_ice_2048_match.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare0.jpg">
+      <Link>embeds\lensflare\flare0.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare1.jpg">
+      <Link>embeds\lensflare\flare1.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare10.jpg">
+      <Link>embeds\lensflare\flare10.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare11.jpg">
+      <Link>embeds\lensflare\flare11.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare12.jpg">
+      <Link>embeds\lensflare\flare12.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare2.jpg">
+      <Link>embeds\lensflare\flare2.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare3.jpg">
+      <Link>embeds\lensflare\flare3.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare4.jpg">
+      <Link>embeds\lensflare\flare4.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare5.jpg">
+      <Link>embeds\lensflare\flare5.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare6.jpg">
+      <Link>embeds\lensflare\flare6.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare7.jpg">
+      <Link>embeds\lensflare\flare7.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare8.jpg">
+      <Link>embeds\lensflare\flare8.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\lensflare\flare9.jpg">
+      <Link>embeds\lensflare\flare9.jpg</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>
