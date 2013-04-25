@@ -38,7 +38,6 @@
     <None Include="src\Advanced_ShallowWaterDemo.as" />
     <None Include="src\Advanced_TerrainDemo.as" />
     <None Include="src\Basic_Fire.as" />
-    <None Include="src\Basic_Load3DS.as" />
     <None Include="src\Basic_Stereo.as" />
     <None Include="src\Basic_Tweening3D.as" />
     <None Include="src\Intermediate_Globe.as" />
@@ -204,5 +203,6 @@
     <Compile Include="src\Basic_SkyBox.as" />
     <Compile Include="src\Basic_View.as" />
     <Compile Include="src\Intermediate_ParticleExplosions.as" />
+    <Compile Include="src\Basic_Load3DS.as" />
   </ItemGroup>
 </Project>

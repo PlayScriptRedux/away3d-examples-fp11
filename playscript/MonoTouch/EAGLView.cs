@@ -147,6 +147,8 @@ namespace Away3DApp
 //			mPlayer.LoadClass(typeof(_root.Basic_Particles));
 //			mPlayer.LoadClass(typeof(_root.Intermediate_ParticleExplosions));
 			mPlayer.LoadClass(typeof(_root.Basic_Shading));
+//			mPlayer.LoadClass(typeof(_root.Basic_Load3DS));
+
 		}
 
 		protected override void OnRenderFrame (FrameEventArgs e)

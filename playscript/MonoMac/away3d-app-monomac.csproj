@@ -212,5 +212,14 @@
     <BundleResource Include="..\..\embeds\player.png">
       <Link>embeds\player.png</Link>
     </BundleResource>
+    <BundleResource Include="..\..\embeds\CoarseRedSand.jpg">
+      <Link>embeds\CoarseRedSand.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\soldier_ant.3ds">
+      <Link>embeds\soldier_ant.3ds</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\embeds\soldier_ant.jpg">
+      <Link>embeds\soldier_ant.jpg</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>

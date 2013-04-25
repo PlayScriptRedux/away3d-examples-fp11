@@ -41,6 +41,7 @@ namespace PlayScriptApp
 //			player.LoadClass(typeof(_root.Basic_Particles));
 //			player.LoadClass(typeof(_root.Intermediate_ParticleExplosions));
 			player.LoadClass(typeof(_root.Basic_Shading));
+//			player.LoadClass(typeof(_root.Basic_Load3DS));
 
 			// set window title
 			Window.Title = player.Title;

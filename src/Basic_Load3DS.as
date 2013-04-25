@@ -136,11 +136,11 @@ package
 			
 			//setup the url map for textures in the 3ds file
 			var assetLoaderContext:AssetLoaderContext = new AssetLoaderContext();
-			assetLoaderContext.mapUrlToData("texture.jpg", new AntTexture());
+			assetLoaderContext.mapUrlToData("texture.jpg", loadEmbed(this, "AntTexture") );
 			
 			//setup materials
-			_groundMaterial = new TextureMaterial(Cast.bitmapTexture(SandTexture));
-			_groundMaterial.shadowMethod = new FilteredShadowMapMethod(_light);
+			_groundMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this, "SandTexture")));
+			//_groundMaterial.shadowMethod = new FilteredShadowMapMethod(_light);
 			_groundMaterial.lightPicker = _lightPicker;
 			_groundMaterial.specular = 0;
 			_ground = new Mesh(new PlaneGeometry(1000, 1000), _groundMaterial);
@@ -151,12 +151,12 @@ package
 			_loader.scale(300);
 			_loader.z = -200;
 			_loader.addEventListener(AssetEvent.ASSET_COMPLETE, onAssetComplete);
-			_loader.loadData(new AntModel(), assetLoaderContext);
+			_loader.loadData(loadEmbed(this, "AntModel"), assetLoaderContext);
 			_view.scene.addChild(_loader);
 			
 			
 			//add signature
-			_signature = new SignatureSwf();
+			_signature = loadEmbed(this, "SignatureSwf");
 			_signatureBitmap = new Bitmap(new BitmapData(_signature.width, _signature.height, true, 0));
 			stage.quality = StageQuality.HIGH;
 			_signatureBitmap.bitmapData.draw(_signature);
@@ -164,7 +164,7 @@ package
 			addChild(_signatureBitmap);
 			
 			//add stats panel
-			addChild(new AwayStats(_view));
+//			addChild(new AwayStats(_view));
 			
 			//add listeners
 			addEventListener(Event.ENTER_FRAME, onEnterFrame);
@@ -201,7 +201,7 @@ package
 				mesh.castsShadows = true;
 			} else if (event.asset.assetType == AssetType.MATERIAL) {
 				var material:TextureMaterial = event.asset as TextureMaterial;
-				material.shadowMethod = new FilteredShadowMapMethod(_light);
+				//material.shadowMethod = new FilteredShadowMapMethod(_light);
 				material.lightPicker = _lightPicker;
 				material.gloss = 30;
 				material.specular = 1;

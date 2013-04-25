@@ -282,6 +282,9 @@
     <BundleResource Include="embeds\trinket_specular.jpg" />
     <BundleResource Include="embeds\weave_diffuse.jpg" />
     <BundleResource Include="embeds\weave_normal.jpg" />
+    <BundleResource Include="embeds\CoarseRedSand.jpg" />
+    <BundleResource Include="embeds\soldier_ant.jpg" />
+    <BundleResource Include="embeds\soldier_ant.3ds" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-monotouch.csproj">
