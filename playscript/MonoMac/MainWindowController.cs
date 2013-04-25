@@ -40,8 +40,9 @@ namespace PlayScriptApp
 //			player.LoadClass(typeof(_root.Basic_SkyBox));
 //			player.LoadClass(typeof(_root.Basic_Particles));
 //			player.LoadClass(typeof(_root.Intermediate_ParticleExplosions));
-			player.LoadClass(typeof(_root.Basic_Shading));
+//			player.LoadClass(typeof(_root.Basic_Shading));
 //			player.LoadClass(typeof(_root.Basic_Load3DS));
+			player.LoadClass(typeof(_root.Basic_Fire));
 
 			// set window title
 			Window.Title = player.Title;
