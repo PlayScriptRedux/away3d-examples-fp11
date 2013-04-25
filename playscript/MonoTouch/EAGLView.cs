@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 
 using OpenTK;
 using OpenTK.Graphics.ES20;
@@ -13,17 +12,13 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.OpenGLES;
 using MonoTouch.UIKit;
 
-using flash.display;
-using flash.display3D;
-
 namespace Away3DApp
 {
 	[Register ("EAGLView")]
 	public class EAGLView : iPhoneOSGameView
 	{
-		// this is our flash display stage
-		flash.display.Stage    mStage;
-        flash.display.Sprite   mDemoSprite;
+		// this is our playscript player
+		PlayScript.Player      mPlayer;
 
 		[Export("initWithCoder:")]
 		public EAGLView (NSCoder coder) : base (coder)
@@ -59,78 +54,25 @@ namespace Away3DApp
 			base.DestroyFrameBuffer ();
 		}
 
-
 		public override void TouchesBegan (NSSet touches, UIEvent evt)
 		{
 			base.TouchesBegan (touches, evt);
-		
-			foreach (UITouch touch in touches) {
-				var p = touch.LocationInView(this);
-				// Console.WriteLine ("touches-began {0}", p);
 
-				if (mStage!=null) 
-				{
-					mStage.mouseX = p.X;
-					mStage.mouseY = p.Y;
-
-					// dispatch touch event
-					var te = new flash.events.TouchEvent(flash.events.TouchEvent.TOUCH_BEGIN, true, false, 0, true, p.X, p.Y, 1.0, 1.0, 1.0 );
-					mStage.dispatchEvent (te);
-
-					// dispatch mouse event
-					var me = new flash.events.MouseEvent(flash.events.MouseEvent.MOUSE_DOWN, true, false, p.X, p.Y, mStage);
-					mStage.dispatchEvent (me);
-				}
-
-			}
+			mPlayer.OnTouchesBegan(touches, evt);
 		}
 
 		public override void TouchesMoved (NSSet touches, UIEvent evt)
 		{
 			base.TouchesMoved (touches, evt);
 		
-			foreach (UITouch touch in touches) {
-				var p = touch.LocationInView(this);
-				// Console.WriteLine ("touches-moved {0}", p);
-
-				if (mStage!=null) 
-				{
-					mStage.mouseX = p.X;
-					mStage.mouseY = p.Y;
-
-					// dispatch touch event
-					var te = new flash.events.TouchEvent(flash.events.TouchEvent.TOUCH_MOVE, true, false, 0, true, p.X, p.Y, 1.0, 1.0, 1.0 );
-					mStage.dispatchEvent (te);
-
-					// dispatch mouse event
-					var me = new flash.events.MouseEvent(flash.events.MouseEvent.MOUSE_MOVE, true, false, p.X, p.Y, mStage);
-					mStage.dispatchEvent (me);
-				}
-			}
+			mPlayer.OnTouchesMoved(touches, evt);
 		}
 
 		public override void TouchesEnded (NSSet touches, UIEvent evt)
 		{
 			base.TouchesEnded (touches, evt);
 
-			foreach (UITouch touch in touches) {
-				var p = touch.LocationInView(this);
-				// Console.WriteLine ("touches-ended {0}", p);
-
-				if (mStage!=null) 
-				{
-					mStage.mouseX = p.X;
-					mStage.mouseY = p.Y;
-
-					// dispatch touch event
-					var te = new flash.events.TouchEvent(flash.events.TouchEvent.TOUCH_END, true, false, 0, true, p.X, p.Y, 1.0, 1.0, 1.0 );
-					mStage.dispatchEvent (te);
-
-					// dispatch mouse event
-					var me = new flash.events.MouseEvent(flash.events.MouseEvent.MOUSE_UP, true, false, p.X, p.Y, mStage);
-					mStage.dispatchEvent (me);
-				}
-			}
+			mPlayer.OnTouchesEnded(touches, evt);
 		}
 
 
@@ -168,7 +110,11 @@ namespace Away3DApp
 			displayLink.FrameInterval = frameInterval;
 			displayLink.AddToRunLoop (NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
 			this.displayLink = displayLink;
-			
+
+			if (mPlayer == null) {
+				InitPlayer();
+			}
+
 			IsAnimating = true;
 		}
 		
@@ -190,35 +136,28 @@ namespace Away3DApp
 		
 		#endregion
 
+		protected void InitPlayer()
+		{
+			// create player
+			mPlayer = new PlayScript.Player(this.Frame);
+			
+			// load swf application
+//			mPlayer.LoadClass(typeof(_root.Basic_View));
+//			mPlayer.LoadClass(typeof(_root.Basic_SkyBox));
+//			mPlayer.LoadClass(typeof(_root.Basic_Particles));
+//			mPlayer.LoadClass(typeof(_root.Intermediate_ParticleExplosions));
+			mPlayer.LoadClass(typeof(_root.Basic_Shading));
+		}
+
 		protected override void OnRenderFrame (FrameEventArgs e)
 		{
 			base.OnRenderFrame (e);
 			
 			MakeCurrent ();
 
-			if (mStage == null) {
-				// construct flash stage
-				mStage = new flash.display.Stage ((int)this.Frame.Width, (int)this.Frame.Height);
+			if (mPlayer != null) {
+				mPlayer.OnFrame();
 			}
-
-			if (mDemoSprite == null) {
-				// construct demo
-                // $$TODO come up with a better demo chooser!
-				flash.display.DisplayObject.globalStage = mStage;
-                //mDemoSprite = new _root.Basic_View();
-                //mDemoSprite = new _root.Basic_SkyBox();
-                //mDemoSprite = new _root.Basic_Particles();
-                //mDemoSprite = new _root.Intermediate_ParticleExplosions();
-                mDemoSprite = new _root.Basic_Shading();
-				flash.display.DisplayObject.globalStage = null;
-			}
-
-			if (mStage != null) {
-				mStage.onEnterFrame ();
-			}
-			
-			// update all timer objects
-			flash.utils.Timer.advanceAllTimers();
 
 			SwapBuffers ();
 		}
