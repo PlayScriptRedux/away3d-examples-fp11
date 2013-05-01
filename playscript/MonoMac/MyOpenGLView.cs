@@ -145,6 +145,11 @@ namespace PlayScriptApp
 			player.OnMouseMoved (GetLocationForEvent(theEvent), theEvent.ButtonMask);
 		}
 
+		public override void ScrollWheel(NSEvent theEvent)
+		{
+			player.OnScrollWheel(GetLocationForEvent(theEvent), theEvent.DeltaY);
+		}
+
 
 		private void DrawView ()
 		{
