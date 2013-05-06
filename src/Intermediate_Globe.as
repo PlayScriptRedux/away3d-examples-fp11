@@ -228,7 +228,7 @@ package
 			addChild(view);
 			
 			//add signature
-			Signature = Sprite(loadEmbed(this, "SignatureSwf"));
+			Signature = Sprite(new SignatureSwf);
 			SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
 			stage.quality = StageQuality.HIGH;
 			SignatureBitmap.bitmapData.draw(Signature);
@@ -280,18 +280,18 @@ package
 		
 		private function initLensFlare():void
 		{
-			flares.push(new FlareObject(loadEmbed(this,"Flare10"),  3.2, -0.01, 147.9));
-			flares.push(new FlareObject(loadEmbed(this,"Flare11"),  6,    0,     30.6));
-			flares.push(new FlareObject(loadEmbed(this,"Flare7"),   2,    0,     25.5));
-			flares.push(new FlareObject(loadEmbed(this,"Flare7"),   4,    0,     17.85));
-			flares.push(new FlareObject(loadEmbed(this,"Flare12"),  0.4,  0.32,  22.95));
-			flares.push(new FlareObject(loadEmbed(this,"Flare6"),   1,    0.68,  20.4));
-			flares.push(new FlareObject(loadEmbed(this,"Flare2"),   1.25, 1.1,   48.45));
-			flares.push(new FlareObject(loadEmbed(this,"Flare3"),   1.75, 1.37,   7.65));
-			flares.push(new FlareObject(loadEmbed(this,"Flare4"),   2.75, 1.85,  12.75));
-			flares.push(new FlareObject(loadEmbed(this,"Flare8"),   0.5,  2.21,  33.15));
-			flares.push(new FlareObject(loadEmbed(this,"Flare6"),   4,    2.5,   10.4));
-			flares.push(new FlareObject(loadEmbed(this,"Flare7"),   10,   2.66,  50));
+			flares.push(new FlareObject(new Flare10,  3.2, -0.01, 147.9));
+			flares.push(new FlareObject(new Flare11,  6,    0,     30.6));
+			flares.push(new FlareObject(new Flare7,   2,    0,     25.5));
+			flares.push(new FlareObject(new Flare7,   4,    0,     17.85));
+			flares.push(new FlareObject(new Flare12,  0.4,  0.32,  22.95));
+			flares.push(new FlareObject(new Flare6,   1,    0.68,  20.4));
+			flares.push(new FlareObject(new Flare2,   1.25, 1.1,   48.45));
+			flares.push(new FlareObject(new Flare3,   1.75, 1.37,   7.65));
+			flares.push(new FlareObject(new Flare4,   2.75, 1.85,  12.75));
+			flares.push(new FlareObject(new Flare8,   0.5,  2.21,  33.15));
+			flares.push(new FlareObject(new Flare6,   4,    2.5,   10.4));
+			flares.push(new FlareObject(new Flare7,   10,   2.66,  50));
 		}
 		
 		/**
@@ -299,10 +299,10 @@ package
 		 */
 		private function initMaterials():void
 		{
-			cubeTexture = new BitmapCubeTexture(Cast.bitmapData(loadEmbed(this,"PosX")), Cast.bitmapData(loadEmbed(this,"NegX")), Cast.bitmapData(loadEmbed(this,"PosY")), Cast.bitmapData(loadEmbed(this,"NegY")), Cast.bitmapData(loadEmbed(this,"PosZ")), Cast.bitmapData(loadEmbed(this,"NegZ")));
+			cubeTexture = new BitmapCubeTexture(Cast.bitmapData(PosX), Cast.bitmapData(NegX), Cast.bitmapData(PosY), Cast.bitmapData(NegY), Cast.bitmapData(PosZ), Cast.bitmapData(NegZ));
 			
 			//adjust specular map
-			var specBitmap:BitmapData = Cast.bitmapData(loadEmbed(this,"EarthSpecular")); 
+			var specBitmap:BitmapData = Cast.bitmapData(EarthSpecular); 
 			specBitmap.colorTransform(specBitmap.rect, new ColorTransform(1, 1, 1, 1, 64, 64, 64));
 			
 			var specular:FresnelSpecularMethod = new FresnelSpecularMethod(true);
@@ -310,14 +310,14 @@ package
 			specular.normalReflectance = 0.1;
 			specular.shadingModel = SpecularShadingModel.PHONG;
 			
-			sunMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this,"Flare10")));
+			sunMaterial = new TextureMaterial(Cast.bitmapTexture(Flare10));
 			sunMaterial.blendMode = BlendMode.ADD;
 			
-			groundMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this,"EarthDiffuse")));
+			groundMaterial = new TextureMaterial(Cast.bitmapTexture(EarthDiffuse));
 			groundMaterial.specularMethod = specular;
 			groundMaterial.specularMap = new BitmapTexture(specBitmap);
-			groundMaterial.normalMap = Cast.bitmapTexture(loadEmbed(this,"EarthNormals"));
-			groundMaterial.ambientTexture = Cast.bitmapTexture(loadEmbed(this,"EarthNight"));
+			groundMaterial.normalMap = Cast.bitmapTexture(EarthNormals);
+			groundMaterial.ambientTexture = Cast.bitmapTexture(EarthNight);
 			groundMaterial.lightPicker = lightPicker;
 			groundMaterial.gloss = 5;
 			groundMaterial.specular = 1;
@@ -325,8 +325,8 @@ package
 			groundMaterial.ambient = 1;
 			
 			var skyBitmap:BitmapData = new BitmapData(2048, 1024, true, 0xFFFFFFFF);
-			skyBitmap.copyChannel(Cast.bitmapData(loadEmbed(this,"SkyDiffuse")), skyBitmap.rect, new Point(), BitmapDataChannel.RED, BitmapDataChannel.ALPHA);
-			//var skyBitmap:BitmapData = Cast.bitmapData(loadEmbed(this,"SkyDiffuse"));
+			skyBitmap.copyChannel(Cast.bitmapData(SkyDiffuse), skyBitmap.rect, new Point(), BitmapDataChannel.RED, BitmapDataChannel.ALPHA);
+			//var skyBitmap:BitmapData = Cast.bitmapData(new SkyDiffuse"));
 
 			cloudMaterial = new TextureMaterial(new BitmapTexture(skyBitmap));
 			cloudMaterial.alphaBlending = true;

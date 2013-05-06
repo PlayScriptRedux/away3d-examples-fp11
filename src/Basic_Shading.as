@@ -61,7 +61,6 @@ package
     	[Embed(source="/../embeds/signature.swf", symbol="Signature")]
     	private var SignatureSwf:Class;
     	
-#if false
 		//cube textures
 		[Embed(source="/../embeds/trinket_diffuse.jpg")]
     	public static var TrinketDiffuse:Class;
@@ -89,25 +88,6 @@ package
 		public static var FloorSpecular:Class;
 		[Embed(source="/../embeds/floor_normal.jpg")]
 		public static var FloorNormals:Class;
-#else
-		//cube textures
-    	public static var TrinketDiffuse:BitmapData = BitmapData.loadFromPath("embeds/trinket_diffuse.jpg");
-		public static var TrinketSpecular:BitmapData = BitmapData.loadFromPath("embeds/trinket_specular.jpg");
-		public static var TrinketNormals:BitmapData = BitmapData.loadFromPath("embeds/trinket_normal.jpg");
-		
-    	//sphere textures
-    	public static var BeachBallDiffuse:BitmapData = BitmapData.loadFromPath("embeds/beachball_diffuse.jpg");
-		public static var BeachBallSpecular:BitmapData = BitmapData.loadFromPath("embeds/beachball_specular.jpg");
-		
-    	//torus textures
-		public static var WeaveDiffuse:BitmapData = BitmapData.loadFromPath("embeds/weave_diffuse.jpg");
-		public static var WeaveNormals:BitmapData = BitmapData.loadFromPath("embeds/weave_normal.jpg");
-		
-		//plane textures
-		public static var FloorDiffuse:BitmapData = BitmapData.loadFromPath("embeds/floor_diffuse.jpg");
-		public static var FloorSpecular:BitmapData = BitmapData.loadFromPath("embeds/floor_specular.jpg");
-		public static var FloorNormals:BitmapData = BitmapData.loadFromPath("embeds/floor_normal.jpg");
-#endif
     	
     	//engine variables
     	private var scene:Scene3D;

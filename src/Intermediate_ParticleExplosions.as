@@ -72,18 +72,13 @@ package
 		public var SignatureSwf:Class;
 		
 		//ADobe AIR image
-		#if false
 		[Embed(source="/../embeds/air.png")]
 		private var AIRImage:Class;
 		
 		//Adobe Flash player image
 		[Embed(source="/../embeds/player.png")]
 		private var PlayerImage:Class;
-		#else
-		private var AIRImage:BitmapData = BitmapData.loadFromPath("embeds/air.png");
-		private var PlayerImage:BitmapData = BitmapData.loadFromPath("embeds/player.png");
-		#endif
-		
+
 		//engine variables
 		private var scene:Scene3D;
 		private var camera:Camera3D;

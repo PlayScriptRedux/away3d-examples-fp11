@@ -67,13 +67,9 @@ package
 		private var SignatureSwf:Class;
 		
 		//particle image
-#if false
 		[Embed(source="/../embeds/blue.png")]
 		private var ParticleImg:Class;
-#else
-		private var ParticleImg:BitmapData = BitmapData.loadFromPath("embeds/blue.png");
-#endif
-		
+
 		//engine variables
 		private var _view:View3D;
 		private var _cameraController:HoverController;

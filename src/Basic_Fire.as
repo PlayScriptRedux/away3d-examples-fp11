@@ -165,7 +165,7 @@ package
 			addChild(view);
 			
 			//add signature
-			Signature = Sprite(loadEmbed(this, "SignatureSwf"));
+			Signature = Sprite(new SignatureSwf);
 			SignatureBitmap = new Bitmap(new BitmapData(Signature.width, Signature.height, true, 0));
 			stage.quality = StageQuality.HIGH;
 			SignatureBitmap.bitmapData.draw(Signature);
@@ -197,15 +197,15 @@ package
 		 */
 		private function initMaterials():void
 		{
-			planeMaterial = new TextureMultiPassMaterial(Cast.bitmapTexture(loadEmbed(this,"FloorDiffuse")));
-			planeMaterial.specularMap = Cast.bitmapTexture(loadEmbed(this, "FloorSpecular"));
-			planeMaterial.normalMap = Cast.bitmapTexture(loadEmbed(this, "FloorNormals"));
+			planeMaterial = new TextureMultiPassMaterial(Cast.bitmapTexture(FloorDiffuse));
+			planeMaterial.specularMap = Cast.bitmapTexture(FloorSpecular);
+			planeMaterial.normalMap = Cast.bitmapTexture(FloorNormals);
 			planeMaterial.lightPicker = lightPicker;
 			planeMaterial.repeat = true;
 			planeMaterial.mipmap = false;
 			planeMaterial.specular = 10;
 			
-			particleMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this,"FireTexture")));
+			particleMaterial = new TextureMaterial(Cast.bitmapTexture(FireTexture));
 			particleMaterial.blendMode = BlendMode.ADD;
 		}
 		

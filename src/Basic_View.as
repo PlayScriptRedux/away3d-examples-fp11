@@ -53,19 +53,15 @@ package
 	public class Basic_View extends Sprite
 	{
 		//plane texture
-		#if false
 		[Embed(source="/../embeds/floor_diffuse.jpg")]
 		public static var FloorDiffuse:Class;
-		#else
-		public static var FloorDiffuse:BitmapData = BitmapData.loadFromPath("embeds/floor_diffuse.jpg");
-		#endif
 
 		//engine variables
 		private var _view:View3D;
 		
 		//scene objects
 		private var _plane:Mesh;
-		
+
 		/**
 		 * Constructor
 		 */
@@ -82,7 +78,7 @@ package
 			_view.camera.z = -600;
 			_view.camera.y = 500;
 			_view.camera.lookAt(new Vector3D());
-			
+
 			//setup the scene
 			_plane = new Mesh(new PlaneGeometry(700, 700), new TextureMaterial(Cast.bitmapTexture(FloorDiffuse)));
 			_view.scene.addChild(_plane);

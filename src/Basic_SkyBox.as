@@ -55,7 +55,6 @@ package
 	public class Basic_SkyBox extends Sprite
 	{
 		// Environment map.
-#if false
 		[Embed(source="../embeds/skybox/snow_positive_x.jpg")]
 		private var EnvPosX:Class;
 		[Embed(source="../embeds/skybox/snow_positive_y.jpg")]
@@ -68,14 +67,7 @@ package
 		private var EnvNegY:Class;
 		[Embed(source="../embeds/skybox/snow_negative_z.jpg")]
 		private var EnvNegZ:Class;
-#else
-		private var EnvPosX:BitmapData = BitmapData.loadFromPath("embeds/skybox/snow_positive_x.jpg");
-		private var EnvPosY:BitmapData = BitmapData.loadFromPath("embeds/skybox/snow_positive_y.jpg");
-		private var EnvPosZ:BitmapData = BitmapData.loadFromPath("embeds/skybox/snow_positive_z.jpg");
-		private var EnvNegX:BitmapData = BitmapData.loadFromPath("embeds/skybox/snow_negative_x.jpg");
-		private var EnvNegY:BitmapData = BitmapData.loadFromPath("embeds/skybox/snow_negative_y.jpg");
-		private var EnvNegZ:BitmapData = BitmapData.loadFromPath("embeds/skybox/snow_negative_z.jpg");
-#endif
+
 		//engine variables
 		private var _view:View3D;
 		

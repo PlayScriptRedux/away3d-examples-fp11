@@ -136,10 +136,10 @@ package
 			
 			//setup the url map for textures in the 3ds file
 			var assetLoaderContext:AssetLoaderContext = new AssetLoaderContext();
-			assetLoaderContext.mapUrlToData("texture.jpg", loadEmbed(this, "AntTexture") );
+			assetLoaderContext.mapUrlToData("texture.jpg", new AntTexture );
 			
 			//setup materials
-			_groundMaterial = new TextureMaterial(Cast.bitmapTexture(loadEmbed(this, "SandTexture")));
+			_groundMaterial = new TextureMaterial(Cast.bitmapTexture(SandTexture));
 			_groundMaterial.shadowMethod = new FilteredShadowMapMethod(_light);
 			_groundMaterial.lightPicker = _lightPicker;
 			_groundMaterial.specular = 0;
@@ -151,12 +151,12 @@ package
 			_loader.scale(300);
 			_loader.z = -200;
 			_loader.addEventListener(AssetEvent.ASSET_COMPLETE, onAssetComplete);
-			_loader.loadData(loadEmbed(this, "AntModel"), assetLoaderContext);
+			_loader.loadData(new AntModel, assetLoaderContext);
 			_view.scene.addChild(_loader);
 			
 			
 			//add signature
-			_signature = loadEmbed(this, "SignatureSwf");
+			_signature = new SignatureSwf;
 			_signatureBitmap = new Bitmap(new BitmapData(_signature.width, _signature.height, true, 0));
 			stage.quality = StageQuality.HIGH;
 			_signatureBitmap.bitmapData.draw(_signature);
