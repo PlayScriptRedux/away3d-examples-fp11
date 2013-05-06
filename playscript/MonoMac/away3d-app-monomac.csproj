@@ -79,10 +79,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Mono\MonoMac\v0.0\Mono.MonoMac.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\pscorlib\pscorlib-net_4_0_monomac.csproj">
-      <Project>{EDBACFCB-2817-4A2E-8DDF-B24AEFA56352}</Project>
-      <Name>pscorlib-net_4_0_monomac</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\playscript-away3d-core\away3d-core-monomac.csproj">
       <Project>{91FC9AA4-D01B-4AF1-83C8-ED31CB51B84E}</Project>
       <Name>away3d-core-monomac</Name>
@@ -90,6 +86,14 @@
     <ProjectReference Include="..\..\away3d-examples-monomac.csproj">
       <Project>{C782716F-D0E1-465F-A79C-70059B1A6AAC}</Project>
       <Name>away3d-examples-monomac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_0.csproj">
+      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
+      <Name>PlayScript.Dynamic_aot-net_4_0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\pscorlib\pscorlib-net_4_0_monomac.csproj">
+      <Project>{EDBACFCB-2817-4A2E-8DDF-B24AEFA56352}</Project>
+      <Name>pscorlib-net_4_0_monomac</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
