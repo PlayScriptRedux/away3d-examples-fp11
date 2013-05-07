@@ -8,7 +8,7 @@
     <ProjectGuid>{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}</ProjectGuid>
     <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PlayScriptApp</RootNamespace>
+    <RootNamespace>PlayScriptAway3D</RootNamespace>
     <AssemblyName>away3d-app-monomac</AssemblyName>
     <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
   </PropertyGroup>
@@ -51,27 +51,7 @@
     <Reference Include="MonoMac" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.cs">
-      <DependentUpon>MainWindow.xib</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindowController.cs">
-      <DependentUpon>MainWindow.xib</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xib.designer.cs">
-      <DependentUpon>MainWindow.xib</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs">
-      <DependentUpon>MainMenu.xib</DependentUpon>
-    </Compile>
-    <Compile Include="MainMenu.xib.designer.cs">
-      <DependentUpon>MainMenu.xib</DependentUpon>
-    </Compile>
-    <Compile Include="MyOpenGLView.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="MainWindow.xib" xmlns="" />
-    <InterfaceDefinition Include="MainMenu.xib" xmlns="" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -94,6 +74,10 @@
     <ProjectReference Include="..\..\..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-net_4_0_monomac.csproj">
       <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
       <Name>pscorlib_aot-net_4_0_monomac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\PlayScript.Application.OSX\PlayScript.Application.OSX.csproj">
+      <Project>{3829D8CC-3505-48B2-B5A9-18CD9DCCA192}</Project>
+      <Name>PlayScript.Application.OSX</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

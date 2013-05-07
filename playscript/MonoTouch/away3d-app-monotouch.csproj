@@ -100,12 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="OpenGLViewController.cs" />
-    <Compile Include="EAGLView.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="OpenGLViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -124,6 +118,10 @@
     <ProjectReference Include="..\..\..\playscript-away3d-core\away3d-core-monotouch.csproj">
       <Project>{FF1734CB-3667-4A23-BC9F-795E331A44B9}</Project>
       <Name>away3d-core-monotouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\PlayScript.Application.iOS\PlayScript.Application.iOS.csproj">
+      <Project>{20E6592F-EC79-4750-A9B4-86C31F2B87A8}</Project>
+      <Name>PlayScript.Application.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
