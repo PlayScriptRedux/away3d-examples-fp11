@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "away3d-app-monotouch", "pla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "away3d-core-monotouch", "..\playscript-away3d-core\away3d-core-monotouch.csproj", "{FF1734CB-3667-4A23-BC9F-795E331A44B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.iOS", "..\playscript\PlayScript.Application.iOS\PlayScript.Application.iOS.csproj", "{20E6592F-EC79-4750-A9B4-86C31F2B87A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.iOS", "..\playscript-base\PlayScript.Application.iOS\PlayScript.Application.iOS.csproj", "{20E6592F-EC79-4750-A9B4-86C31F2B87A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Away3D OSX", "Away3D OSX", "{9B09DFA5-6EF9-4D7B-8E7B-D5BBFE3F2360}"
 EndProject
@@ -27,15 +27,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Dynamic_aot-net_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pscorlib_aot-net_4_0_monomac", "..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-net_4_0_monomac.csproj", "{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.OSX", "..\playscript\PlayScript.Application.OSX\PlayScript.Application.OSX.csproj", "{3829D8CC-3505-48B2-B5A9-18CD9DCCA192}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.OSX", "..\playscript-base\PlayScript.Application.OSX\PlayScript.Application.OSX.csproj", "{3829D8CC-3505-48B2-B5A9-18CD9DCCA192}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Away3D Windows", "Away3D Windows", "{B774E3A2-353F-4B8C-9637-A153A17352FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.Windows", "..\playscript\PlayScript.Application.Windows\PlayScript.Application.Windows.csproj", "{EDEE389F-53D1-4A0F-901E-47C9BD636330}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.Windows", "..\playscript-base\PlayScript.Application.Windows\PlayScript.Application.Windows.csproj", "{EDEE389F-53D1-4A0F-901E-47C9BD636330}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Away3D Android", "Away3D Android", "{596FD6CF-8B73-437E-8DC8-129F13CE979B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.Android", "..\playscript\PlayScript.Application.Android\PlayScript.Application.Android.csproj", "{F811F67C-16A6-4716-8A2C-6C2CF1373BCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScript.Application.Android", "..\playscript-base\PlayScript.Application.Android\PlayScript.Application.Android.csproj", "{F811F67C-16A6-4716-8A2C-6C2CF1373BCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -407,6 +407,6 @@ Global
 		{F811F67C-16A6-4716-8A2C-6C2CF1373BCB} = {596FD6CF-8B73-437E-8DC8-129F13CE979B}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = playscript\MonoTouch\away3d-app-monotouch.csproj
+		StartupItem = playscript\MonoMac\away3d-app-monomac.csproj
 	EndGlobalSection
 EndGlobal

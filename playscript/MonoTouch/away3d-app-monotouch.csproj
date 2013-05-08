@@ -119,7 +119,7 @@
       <Project>{FF1734CB-3667-4A23-BC9F-795E331A44B9}</Project>
       <Name>away3d-core-monotouch</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript\PlayScript.Application.iOS\PlayScript.Application.iOS.csproj">
+    <ProjectReference Include="..\..\..\playscript-base\PlayScript.Application.iOS\PlayScript.Application.iOS.csproj">
       <Project>{20E6592F-EC79-4750-A9B4-86C31F2B87A8}</Project>
       <Name>PlayScript.Application.iOS</Name>
     </ProjectReference>
