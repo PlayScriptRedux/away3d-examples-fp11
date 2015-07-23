@@ -62,7 +62,7 @@ package
 	
 	[SWF(backgroundColor="#000000", frameRate="60", quality="LOW")]
 	
-	public class Intermediate_ParticleExplosions extends Sprite
+	public class Intermediate_PlayScriptParticleExplosions extends Sprite
 	{
 		private const PARTICLE_SIZE:int = 3;
 		private const NUM_ANIMATORS:uint = 4;
@@ -71,13 +71,13 @@ package
 		[Embed(source="/../embeds/signature.swf", symbol="Signature")]
 		public var SignatureSwf:Class;
 		
-		//ADobe AIR image
-		[Embed(source="/../embeds/air.png")]
+		//PlayScrpt image
+		[Embed(source="/../embeds/PlayScript.png")]
 		private var AIRImage:Class;
 		
-		//Adobe Flash player image
-		[Embed(source="/../embeds/player.png")]
-		private var PlayerImage:Class;
+//		//Adobe Flash player image
+//		[Embed(source="/../embeds/PlayScript.png")]
+//		private var PlayerImage:Class;
 
 		//engine variables
 		private var scene:Scene3D;
@@ -129,7 +129,7 @@ package
 		/**
 		 * Constructor
 		 */
-		public function Intermediate_ParticleExplosions()
+		public function Intermediate_PlayScriptParticleExplosions()
 		{
 			init();
 		}
@@ -164,7 +164,7 @@ package
 			view.camera = camera;
 			
 			//setup controller to be used on the camera
-			cameraController = new HoverController(camera, null, 225, 10, 1000);
+			cameraController = new HoverController(camera, null, 225, 10, 1750);
 			
 			view.addSourceURL("srcview/index.html");
 			addChild(view);
@@ -239,17 +239,17 @@ package
 			var point:Vector3D;
 			
 			//create red and white point vectors for the Adobe Flash Player image
-			bitmapData = Cast.bitmapData(PlayerImage);
+//			bitmapData = Cast.bitmapData(PlayerImage);
 			
-			for (i = 0; i < bitmapData.width; i++) {
-				for (j = 0; j < bitmapData.height; j++) {
-					point = new Vector3D(PARTICLE_SIZE*(i - bitmapData.width / 2 - 100), PARTICLE_SIZE*( -j + bitmapData.height / 2));
-					if (((bitmapData.getPixel(i, j) >> 8) & 0xff) <= 0xb0)
-						redPoints.push(point);
-					else
-						whitePoints.push(point);
-				}
-			}
+//			for (i = 0; i < bitmapData.width; i++) {
+//				for (j = 0; j < bitmapData.height; j++) {
+//					point = new Vector3D(PARTICLE_SIZE*(i - bitmapData.width / 2 - 100), PARTICLE_SIZE*( -j + bitmapData.height / 2));
+//					if (((bitmapData.getPixel(i, j) >> 8) & 0xff) <= 0xb0)
+//						redPoints.push(point);
+//					else
+//						whitePoints.push(point);
+//				}
+//			}
 			
 			//define where one logo stops and another starts
 			redSeparation = redPoints.length;
@@ -263,8 +263,11 @@ package
 					point = new Vector3D(PARTICLE_SIZE*(i - bitmapData.width / 2 + 100), PARTICLE_SIZE*( -j + bitmapData.height / 2));
 					if (((bitmapData.getPixel(i, j) >> 8) & 0xff) <= 0xb0)
 						redPoints.push(point);
-					else
-						whitePoints.push(point);
+					else {
+//						if ( ((j % 2) == 0) && ((i % 2) == 0) ) {
+						    whitePoints.push(point);
+//						}
+					}
 				}
 			}
 			
@@ -320,14 +323,14 @@ package
 			var i:uint = 0;
 			for (i=0; i<NUM_ANIMATORS; i++) {
 				//clone the red particle mesh
-				redParticleMesh = redParticleMesh.clone() as Mesh;
-				redParticleMesh.rotationY = 45*(i-1);
-				scene.addChild(redParticleMesh);
+//				redParticleMesh = redParticleMesh.clone() as Mesh;
+//				redParticleMesh.rotationY = 45*(i-1);
+//				scene.addChild(redParticleMesh);
 				
 				//clone the white particle mesh
-				whiteParticleMesh = whiteParticleMesh.clone() as Mesh;
-				whiteParticleMesh.rotationY = 45*(i-1);
-				scene.addChild(whiteParticleMesh);
+//				whiteParticleMesh = whiteParticleMesh.clone() as Mesh;
+//				whiteParticleMesh.rotationY = 45*(i-1);
+//				scene.addChild(whiteParticleMesh);
 				
 				//create and start the red particle animator
 				redAnimators[i] = new ParticleAnimator(redAnimationSet);
@@ -417,8 +420,8 @@ package
 			
 			//update the light positions
 			angle += Math.PI / 180;
-			greenLight.x = Math.sin(angle) * 600;
-			greenLight.z = Math.cos(angle) * 600;
+			greenLight.x = Math.sin(angle) * 1250;
+			greenLight.z = Math.cos(angle) * 1250;
 			blueLight.x = Math.sin(angle+Math.PI) * 600;
 			blueLight.z = Math.cos(angle+Math.PI) * 600;
 			
