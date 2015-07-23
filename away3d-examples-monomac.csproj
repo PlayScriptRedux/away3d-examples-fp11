@@ -3,12 +3,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{C782716F-D0E1-465F-A79C-70059B1A6AAC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>playscriptaway3dexamples</RootNamespace>
     <AssemblyName>away3d-examples-monomac</AssemblyName>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,20 +35,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="src\Advanced_FractalTreeDemo.as" />
     <None Include="src\Advanced_MultiPassSponzaDemo.as" />
     <None Include="src\Advanced_ShallowWaterDemo.as" />
-    <None Include="src\Advanced_TerrainDemo.as" />
-    <None Include="src\Basic_Stereo.as" />
-    <None Include="src\Intermediate_Head.as" />
     <None Include="src\Intermediate_LightProbes.as" />
-    <None Include="src\Intermediate_MD5Animation.as" />
     <None Include="src\Intermediate_MouseInteraction.as" />
     <None Include="src\Intermediate_OnkbaAWDAnimation.as" />
-    <None Include="src\Intermediate_ParticleTrails.as" />
     <None Include="src\Intermediate_PerelithKnightMD2.as" />
     <None Include="src\Intermediate_PlanarReflections.as" />
-    <None Include="src\Intermediate_PolarBearAWDAnimation.as" />
     <None Include="src\Intermediate_RealTimeEnvMap.as" />
     <None Include="src\assets\PolarBear.awd" />
     <None Include="src\assets\snow.obj" />
@@ -176,21 +171,10 @@
     <None Include="src\shallowwater\MemoryDisturbance.as" />
     <None Include="src\shallowwater\ShallowFluid.as" />
     <None Include="src\utils\BitmapFilterEffects.as" />
+    <None Include="src\Advanced_FractalTreeDemo.as" />
+    <None Include="src\Intermediate_PolarBearAWDAnimation.as" />
+    <None Include="src\Intermediate_ParticleTrails.as" />
     <None Include="src\Basic_Tweening3D.as" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\playscript-away3d-core\away3d-core-monomac.csproj">
-      <Project>{91FC9AA4-D01B-4AF1-83C8-ED31CB51B84E}</Project>
-      <Name>away3d-core-monomac</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_0.csproj">
-      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
-      <Name>PlayScript.Dynamic_aot-net_4_0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-net_4_0_monomac.csproj">
-      <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
-      <Name>pscorlib_aot-net_4_0_monomac</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
@@ -204,5 +188,24 @@
     <Compile Include="src\Basic_Load3DS.as" />
     <Compile Include="src\Basic_Fire.as" />
     <Compile Include="src\Intermediate_Globe.as" />
+    <Compile Include="src\Advanced_TerrainDemo.as" />
+    <Compile Include="src\Intermediate_MD5Animation.as" />
+    <Compile Include="src\Basic_Stereo.as" />
+    <Compile Include="src\Intermediate_Head.as" />
+    <Compile Include="src\Intermediate_PlayScriptParticleExplosions.as" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\away3d-core-fp11\away3d-core-monomac.csproj">
+      <Project>{91FC9AA4-D01B-4AF1-83C8-ED31CB51B84E}</Project>
+      <Name>away3d-core-monomac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\playscript\mcs\class\pscorlib_aot\pscorlib_aot-net_4_5_monomac.csproj">
+      <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
+      <Name>pscorlib_aot-net_4_5_monomac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\playscript\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_5.csproj">
+      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
+      <Name>PlayScript.Dynamic_aot-net_4_5</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
