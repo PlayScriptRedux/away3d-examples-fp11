@@ -100,27 +100,11 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-monotouch.csproj">
-      <Project>{CC73D545-B7C7-4FB4-996A-C76E8B0D5B81}</Project>
-      <Name>PlayScript.Dynamic_aot-monotouch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-monotouch.csproj">
-      <Project>{876BFFD1-CEFA-44DD-9243-A50958EF65DD}</Project>
-      <Name>pscorlib_aot-monotouch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\away3d-examples-monotouch.csproj">
-      <Project>{8291EB6E-8B97-4647-8BF2-80A21949D3D1}</Project>
-      <Name>away3d-examples-monotouch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript-away3d-core\away3d-core-monotouch.csproj">
-      <Project>{FF1734CB-3667-4A23-BC9F-795E331A44B9}</Project>
-      <Name>away3d-core-monotouch</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\playscript-base\PlayScript.Application.iOS\PlayScript.Application.iOS.csproj">
       <Project>{20E6592F-EC79-4750-A9B4-86C31F2B87A8}</Project>
       <Name>PlayScript.Application.iOS</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

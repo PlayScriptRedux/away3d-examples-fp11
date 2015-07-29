@@ -175,6 +175,7 @@
     <None Include="src\Intermediate_PolarBearAWDAnimation.as" />
     <None Include="src\Intermediate_ParticleTrails.as" />
     <None Include="src\Basic_Tweening3D.as" />
+    <None Include="src\Intermediate_MD5Animation.as" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
@@ -189,7 +190,6 @@
     <Compile Include="src\Basic_Fire.as" />
     <Compile Include="src\Intermediate_Globe.as" />
     <Compile Include="src\Advanced_TerrainDemo.as" />
-    <Compile Include="src\Intermediate_MD5Animation.as" />
     <Compile Include="src\Basic_Stereo.as" />
     <Compile Include="src\Intermediate_Head.as" />
     <Compile Include="src\Intermediate_PlayScriptParticleExplosions.as" />
