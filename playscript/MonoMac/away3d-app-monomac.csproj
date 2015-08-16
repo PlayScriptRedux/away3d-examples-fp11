@@ -70,76 +70,76 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="..\..\..\..\away3d-examples\embeds\R2D2.obj">
+    <None Include="..\..\embeds\R2D2.obj">
       <Link>embeds\R2D2.obj</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\cornell.obj">
+    <None Include="..\..\embeds\cornell.obj">
       <Link>embeds\cornell.obj</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\fire.atf">
+    <None Include="..\..\embeds\fire.atf">
       <Link>embeds\fire.atf</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\signature.fla">
+    <None Include="..\..\embeds\signature.fla">
       <Link>embeds\signature.fla</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\signature.swf">
+    <None Include="..\..\embeds\signature.swf">
       <Link>embeds\signature.swf</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\attack2.md5anim">
+    <None Include="..\..\embeds\hellknight\attack2.md5anim">
       <Link>embeds\hellknight\attack2.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\attack3.md5anim">
+    <None Include="..\..\embeds\hellknight\attack3.md5anim">
       <Link>embeds\hellknight\attack3.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\chest.md5anim">
+    <None Include="..\..\embeds\hellknight\chest.md5anim">
       <Link>embeds\hellknight\chest.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\headpain.md5anim">
+    <None Include="..\..\embeds\hellknight\headpain.md5anim">
       <Link>embeds\hellknight\headpain.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\hellknight.md5mesh">
+    <None Include="..\..\embeds\hellknight\hellknight.md5mesh">
       <Link>embeds\hellknight\hellknight.md5mesh</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\idle2.md5anim">
+    <None Include="..\..\embeds\hellknight\idle2.md5anim">
       <Link>embeds\hellknight\idle2.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\ik_pose.md5anim">
+    <None Include="..\..\embeds\hellknight\ik_pose.md5anim">
       <Link>embeds\hellknight\ik_pose.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\initial.md5anim">
+    <None Include="..\..\embeds\hellknight\initial.md5anim">
       <Link>embeds\hellknight\initial.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\leftslash.md5anim">
+    <None Include="..\..\embeds\hellknight\leftslash.md5anim">
       <Link>embeds\hellknight\leftslash.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\pain1.md5anim">
+    <None Include="..\..\embeds\hellknight\pain1.md5anim">
       <Link>embeds\hellknight\pain1.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\pain_luparm.md5anim">
+    <None Include="..\..\embeds\hellknight\pain_luparm.md5anim">
       <Link>embeds\hellknight\pain_luparm.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\pain_ruparm.md5anim">
+    <None Include="..\..\embeds\hellknight\pain_ruparm.md5anim">
       <Link>embeds\hellknight\pain_ruparm.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\range_attack2.md5anim">
+    <None Include="..\..\embeds\hellknight\range_attack2.md5anim">
       <Link>embeds\hellknight\range_attack2.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\roar1.md5anim">
+    <None Include="..\..\embeds\hellknight\roar1.md5anim">
       <Link>embeds\hellknight\roar1.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\stand.md5anim">
+    <None Include="..\..\embeds\hellknight\stand.md5anim">
       <Link>embeds\hellknight\stand.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\turret_attack.md5anim">
+    <None Include="..\..\embeds\hellknight\turret_attack.md5anim">
       <Link>embeds\hellknight\turret_attack.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\walk7.md5anim">
+    <None Include="..\..\embeds\hellknight\walk7.md5anim">
       <Link>embeds\hellknight\walk7.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\hellknight\walk7_left.md5anim">
+    <None Include="..\..\embeds\hellknight\walk7_left.md5anim">
       <Link>embeds\hellknight\walk7_left.md5anim</Link>
     </None>
-    <None Include="..\..\..\..\away3d-examples\embeds\pknight\pknight.md2">
+    <None Include="..\..\embeds\pknight\pknight.md2">
       <Link>embeds\pknight\pknight.md2</Link>
     </None>
   </ItemGroup>
@@ -281,6 +281,9 @@
     <BundleResource Include="..\..\embeds\air.png">
       <Link>embeds\air.png</Link>
     </BundleResource>
+    <BundleResource Include="..\..\embeds\arid.jpg">
+      <Link>embeds\arid.jpg</Link>
+    </BundleResource>
     <BundleResource Include="..\..\embeds\player.png">
       <Link>embeds\player.png</Link>
     </BundleResource>
@@ -347,130 +350,127 @@
     <BundleResource Include="..\..\embeds\lensflare\flare9.jpg">
       <Link>embeds\lensflare\flare9.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\beach.jpg">
+    <BundleResource Include="..\..\embeds\terrain\beach.jpg">
       <Link>embeds\terrain\beach.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\grass.jpg">
+    <BundleResource Include="..\..\embeds\terrain\grass.jpg">
       <Link>embeds\terrain\grass.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\rock.jpg">
+    <BundleResource Include="..\..\embeds\terrain\rock.jpg">
       <Link>embeds\terrain\rock.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\terrain_diffuse.jpg">
+    <BundleResource Include="..\..\embeds\terrain\terrain_diffuse.jpg">
       <Link>embeds\terrain\terrain_diffuse.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\terrain_heights.jpg">
+    <BundleResource Include="..\..\embeds\terrain\terrain_heights.jpg">
       <Link>embeds\terrain\terrain_heights.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\terrain_normals.jpg">
+    <BundleResource Include="..\..\embeds\terrain\terrain_normals.jpg">
       <Link>embeds\terrain\terrain_normals.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\terrain\terrain_splats.png">
+    <BundleResource Include="..\..\embeds\terrain\terrain_splats.png">
       <Link>embeds\terrain\terrain_splats.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\arid.jpg">
-      <Link>embeds\arid.jpg</Link>
-    </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\bluelight.png">
+    <BundleResource Include="..\..\embeds\bluelight.png">
       <Link>embeds\bluelight.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\cards_suit.png">
+    <BundleResource Include="..\..\embeds\cards_suit.png">
       <Link>embeds\cards_suit.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\cornellWallNormals.jpg">
+    <BundleResource Include="..\..\embeds\cornellWallNormals.jpg">
       <Link>embeds\cornellWallNormals.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\cornell_baked.jpg">
+    <BundleResource Include="..\..\embeds\cornell_baked.jpg">
       <Link>embeds\cornell_baked.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\desertHeightMap.jpg">
+    <BundleResource Include="..\..\embeds\desertHeightMap.jpg">
       <Link>embeds\desertHeightMap.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\desertsand.jpg">
+    <BundleResource Include="..\..\embeds\desertsand.jpg">
       <Link>embeds\desertsand.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\head_AO.jpg">
+    <BundleResource Include="..\..\embeds\head_AO.jpg">
       <Link>embeds\head_AO.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\head_diffuse.jpg">
+    <BundleResource Include="..\..\embeds\head_diffuse.jpg">
       <Link>embeds\head_diffuse.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\head_normals.jpg">
+    <BundleResource Include="..\..\embeds\head_normals.jpg">
       <Link>embeds\head_normals.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\head_specular.jpg">
+    <BundleResource Include="..\..\embeds\head_specular.jpg">
       <Link>embeds\head_specular.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\polarbear_diffuse.jpg">
+    <BundleResource Include="..\..\embeds\polarbear_diffuse.jpg">
       <Link>embeds\polarbear_diffuse.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\polarbear_normals.jpg">
+    <BundleResource Include="..\..\embeds\polarbear_normals.jpg">
       <Link>embeds\polarbear_normals.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\polarbear_specular.jpg">
+    <BundleResource Include="..\..\embeds\polarbear_specular.jpg">
       <Link>embeds\polarbear_specular.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\r2d2_diffuse.jpg">
+    <BundleResource Include="..\..\embeds\r2d2_diffuse.jpg">
       <Link>embeds\r2d2_diffuse.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\redlight.png">
+    <BundleResource Include="..\..\embeds\redlight.png">
       <Link>embeds\redlight.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\rockbase_diffuse.jpg">
+    <BundleResource Include="..\..\embeds\rockbase_diffuse.jpg">
       <Link>embeds\rockbase_diffuse.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\rockbase_normals.png">
+    <BundleResource Include="..\..\embeds\rockbase_normals.png">
       <Link>embeds\rockbase_normals.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\rockbase_specular.png">
+    <BundleResource Include="..\..\embeds\rockbase_specular.png">
       <Link>embeds\rockbase_specular.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\snow_diffuse.png">
+    <BundleResource Include="..\..\embeds\snow_diffuse.png">
       <Link>embeds\snow_diffuse.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\snow_normals.png">
+    <BundleResource Include="..\..\embeds\snow_normals.png">
       <Link>embeds\snow_normals.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\snow_specular.png">
+    <BundleResource Include="..\..\embeds\snow_specular.png">
       <Link>embeds\snow_specular.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\water_normals.jpg">
+    <BundleResource Include="..\..\embeds\water_normals.jpg">
       <Link>embeds\water_normals.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\hellknight\hellknight_diffuse.jpg">
+    <BundleResource Include="..\..\embeds\hellknight\hellknight_diffuse.jpg">
       <Link>embeds\hellknight\hellknight_diffuse.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\hellknight\hellknight_normals.png">
+    <BundleResource Include="..\..\embeds\hellknight\hellknight_normals.png">
       <Link>embeds\hellknight\hellknight_normals.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\hellknight\hellknight_specular.png">
+    <BundleResource Include="..\..\embeds\hellknight\hellknight_specular.png">
       <Link>embeds\hellknight\hellknight_specular.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\pknight\pknight1.png">
+    <BundleResource Include="..\..\embeds\pknight\pknight1.png">
       <Link>embeds\pknight\pknight1.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\pknight\pknight2.png">
+    <BundleResource Include="..\..\embeds\pknight\pknight2.png">
       <Link>embeds\pknight\pknight2.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\pknight\pknight3.png">
+    <BundleResource Include="..\..\embeds\pknight\pknight3.png">
       <Link>embeds\pknight\pknight3.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\pknight\pknight4.png">
+    <BundleResource Include="..\..\embeds\pknight\pknight4.png">
       <Link>embeds\pknight\pknight4.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\tree\bark0.jpg">
+    <BundleResource Include="..\..\embeds\tree\bark0.jpg">
       <Link>embeds\tree\bark0.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\tree\barkNRM.png">
+    <BundleResource Include="..\..\embeds\tree\barkNRM.png">
       <Link>embeds\tree\barkNRM.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\tree\barkSPEC.png">
+    <BundleResource Include="..\..\embeds\tree\barkSPEC.png">
       <Link>embeds\tree\barkSPEC.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\tree\leaf4.jpg">
+    <BundleResource Include="..\..\embeds\tree\leaf4.jpg">
       <Link>embeds\tree\leaf4.jpg</Link>
     </BundleResource>
-    <BundleResource Include="..\..\..\..\away3d-examples\embeds\head.obj">
+    <BundleResource Include="..\..\embeds\head.obj">
       <Link>embeds\head.obj</Link>
     </BundleResource>
     <BundleResource Include="..\..\embeds\Playscript.png">
